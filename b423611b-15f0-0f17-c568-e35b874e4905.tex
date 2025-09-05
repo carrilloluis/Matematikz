@@ -1,0 +1,48 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{tasks}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{ pdftitle = {   },pdfauthor = {Luis Carrillo Gutiérrez} }
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+\paragraph*{Problema} -- \\
+\begin{itemize}
+	\item{El producto de un número de dos cifras por el mismo pero con sus cifras en orden inverso es 574. Hallar la suma de sus cifras del número citado.
+	\begin{tasks}(5)
+		\task{8}
+		\task{10}
+		\task{15}
+		\task{5}
+		\task{11}
+	\end{tasks}
+	}
+\end{itemize}
+\paragraph*{Datos} -- \\
+$$
+\overline{ab} \cdot \overline{ba} = 574 
+$$
+
+\paragraph*{Solución} -- \\
+
+\noindent Si $a = 1$, al  tabular como primera opción de número natural, entonces $b = 4$ (cifra necesaria para que el producto sea el número en unidades de $574$, en este caso $4$), por lo que $\overline{ab} = 14$, por ende $\overline{ba} = 41$, por consiguiente $\overline{ab} \cdot \overline{ba} = 574$ ó $14 \cdot 41 = 574$ \\
+
+\begin{tabular}{cccc}
+\empty & 1 & 4 & $\times$ \\
+\empty & 4 & 1 & \empty \\
+\hline 
+\empty & 1 & 4 & $+$ \\
+4 & 6 & \empty \\
+\hline 
+5 & 7 & 4 & \empty 
+\end{tabular} \\ \\
+
+$\therefore\quad\overline{ab}$ es $14$ y la suma de sus cifras es $\mathbf{5}$.
+
+\end{document}
