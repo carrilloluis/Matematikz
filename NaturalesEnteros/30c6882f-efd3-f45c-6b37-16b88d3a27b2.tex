@@ -1,0 +1,55 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{tasks}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{ pdftitle = {   }, pdfauthor = {Luis Carrillo Gutiérrez} }
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+\paragraph*{Problema} -- \\
+\begin{itemize}
+	\item{El producto de dos números es $2856$. Si al multiplicando se le agrega $13$ unidades resulta un producto de $3740$. Hallar la suma de los números.
+
+	\begin{tasks}(5)
+		\task{110}
+		\task{115}
+		\task{120}
+		\task{127}
+		\task{130}
+	\end{tasks}
+	}
+\end{itemize}
+\paragraph*{Datos} -- \\
+
+$$
+M \cdot m = 2856 
+$$
+
+$$
+M \cdot (m + 13) = 3740 
+$$
+
+\paragraph*{Solución} -- 
+\begin{eqnarray*}
+M \cdot (m + 13) &=& 3740 \\
+M\cdot m + M \cdot 13 &=& 3740 \\
+2856 + 13 \cdot m &=& 3740  \\
+13 \cdot m &=& 3740 - 2856 \\ 
+13 \cdot m &=& 884 \\ 
+m &=& \dfrac{884}{13} = 68\\
+\text{En}\quad M \cdot m &=& 2856 \\
+M \cdot 68 &=& 2856 \\
+M &=& \dfrac{2856}{68} = 42
+\end{eqnarray*}
+
+$$
+\therefore\quad M + m = 42 + 68 = 110
+$$
+
+\end{document}
