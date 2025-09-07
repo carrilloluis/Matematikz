@@ -1,0 +1,53 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{tasks}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{ pdftitle = {   }, pdfauthor = {Luis Carrillo Gutiérrez} }
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+\paragraph*{Problema} -- \\
+\begin{itemize}
+	\item{En una multiplicación, si al multiplicando se le agrega $5$ y al multiplicador se le quita $5$, entonces el producto aumenta en $600$. ¿Cuál es la diferencia del multiplicando y del multiplicador?.
+
+	\begin{tasks}(5)
+		\task{100}
+		\task{515}
+		\task{325}
+		\task{645}
+		\task{125}
+	\end{tasks}
+	}
+\end{itemize}
+\paragraph*{Datos} -- \\
+
+$$
+M \cdot m = p
+$$
+
+$$
+(M + 5)\cdot (m - 5) = p + 600 
+$$
+
+\paragraph*{Solución} -- 
+\begin{eqnarray*}
+(M + 5) \cdot (m - 5) &=& p + 600  \\
+M\cdot m - 5\cdot M + 5\cdot m - 25 &=& p + 600 \\
+p - 5\cdot M + 5\cdot m &=& p + 600 + 25\\
+p - 5 \cdot (M + m) &=& p + 625 \\
+p + 5 \cdot (M - m) &=& p + 625 \\
+5 \cdot (M - m) &=& 625 \\
+M - m &=& \dfrac{625}{5} = 125 \\
+\end{eqnarray*}
+
+$$
+\therefore\quad M - m = 125
+$$
+
+\end{document}
