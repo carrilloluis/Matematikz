@@ -1,0 +1,75 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{tasks}
+\usepackage{graphicx}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{ pdftitle = {}, pdfauthor = {Luis Carrillo Gutiérrez} }
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\arraystretch}{1.3}
+
+\begin{document}
+\paragraph*{Problema} -- \\
+\begin{itemize}
+	\item{Calcular\quad \scalebox{1.3}{%
+		$\overline{ed}$ + $\overline{cba}$
+	}, si : \scalebox{1.3}{%
+		$\overline{{edcba7}} \times 5 = \overline{7edcba}$
+	}.
+	\begin{tasks}(5)
+		\task{541}
+		\task{284}
+		\task{299}
+		\task{514}
+		\task{355}
+	\end{tasks}
+	}
+\end{itemize}
+\paragraph*{Datos} -- \\
+
+\begin{center}
+	\begin{tabular}{ccccccc}
+	e & d & c & b & a & 7 & $\times$ \\
+	\empty & \empty & \empty & \empty & \empty & 5 & \empty \\ 
+	\hline
+	7 & e & d & c & b & a 
+	\end{tabular}
+\end{center}
+
+\paragraph*{Solución} -- 
+\begin{eqnarray*}
+% \overline{{edcba7}} \times 5 &=& \overline{7edcba} \\
+7 \times 5 &=& a \\
+7 \times 5 = 35 \to a &=& 5\quad\wedge\quad\delta = 3\quad\text{(Donde } \delta\,\text{ es el acarreo)} \\
+a \times 5 + \delta &=& b \\
+5 \times 5 + 3 = 28 \to b &=& 8 \quad\wedge\quad\delta = 2\\
+b \times 5 + \delta &=& c \\
+8 \times 5 + 2 = 42 \to c &=& 2 \quad\wedge\quad\delta = 4\\
+c \times 5 + \delta &=& d \\
+2 \times 5 + 4 = 14 \to d &=& 4 \quad\wedge\quad\delta = 1\\
+d \times 5 + \delta &=& e \\
+4 \times 5 + 1 = 21 \to e &=& 1 \quad\wedge\quad\delta = 2\\
+e \times 5 + \delta &=& 7 \\
+1 \times 5 + 2 &=& 7 \\
+\end{eqnarray*}
+
+\begin{center}
+	\begin{tabular}{ccccccc}
+	1 & 4 & 2 & 8 & 5 & 7 & $\times$ \\
+	\empty & \empty & \empty & \empty & \empty & 5 & \empty \\ 
+	\hline
+	7 & 1 & 4 & 2 & 8 & 5 
+	\end{tabular}
+\end{center}
+
+$$
+\therefore\quad \overline{ed} + \overline{cba} =  14 + 285 = 299
+$$
+
+\end{document}
