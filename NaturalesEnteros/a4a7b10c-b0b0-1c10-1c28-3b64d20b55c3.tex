@@ -1,0 +1,58 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{ pdftitle = {},pdfauthor = {Luis Carrillo Gutiérrez} }
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\paragraph*{Problema} -- \\
+
+\noindent Si $\overline{mnu} + \overline{nmu} = \overline{yyy}$. Hallar $m + n$; si cada cifra ($m, n, u, y$) es un valor par distinto y pertenecen a los $\mathbb{N}$.
+
+\paragraph*{Datos} -- \\
+
+\begin{center}
+\begin{tabular}{cccc}
+	m & n & u & + \\
+	n & m & u & \empty \\
+	\hline
+	y & y & y & \empty
+\end{tabular}
+\end{center}
+
+\noindent Cifras que representan la suma en : \\
+\hspace*{0.6cm}las unidades : $u + u = y \to 2u = y$ \\
+\hspace*{0.6cm}las decenas : $n + m = y \wedge y = 2u \to m + n = 2u$ \\
+\hspace*{0.6cm}las centenas : $m + n = y$ \\
+Números pares en $\mathbb{N} : \{2, 4, 6, 8, \ldots \}$ 
+
+\paragraph*{Solución} -- \\
+
+\noindent Al tabular con $m$ en $2$ y $n$ en $4$, la suma $m + n$ es $6$, pero $u$ es $3$ ó $6 \div 2 = 3$, un número \textbf{impar}. \\
+Al tabular con $m$ en $2$ y $n$ en $6$, la suma $m + n$ es $8$, y $u$ es $4$ ya que $8 \div 2 = 4$, un número \textbf{par},por tanto, cumpliendo además con la condición de ser \textit{números pares distintos}.
+$$
+\therefore m = 2,\,n = 6\quad y\quad u = 4
+$$
+
+\begin{center}
+\begin{tabular}{cccc}
+	2 & 6 & 4 & + \\
+	6 & 2 & 4 & \empty \\
+	\hline
+	8 & 8 & 8 & \empty
+\end{tabular}
+\end{center}
+
+$$
+\therefore m  + n = 8
+$$
+
+\end{document}
