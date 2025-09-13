@@ -1,0 +1,41 @@
+\item{Hallar $\quad a + b + c{,}\quad$ si : $\overline{abc} \cdot 23 = \ldots 396$
+	\begin{tasks}(5)
+		\task{10}
+		\task{11}
+		\task{12}
+		\task{15}
+		\task{16}
+	\end{tasks}
+	\begin{eqnarray*}
+		3 \cdot c &=& \overline{\delta_1 6}\quad (\text{Donde } c \in [0, 1, \ldots, 9] \text{ y } \,\delta_1\, \text{es el acarreo})\\
+		c &=& \dfrac{6}{3} = 2 \quad \wedge\quad \delta_1 = 0 \\
+	\end{eqnarray*}
+	\begin{center}
+		\begin{tabular}{ccccl}
+		\empty & a & b & c & $\times$ \\
+		\empty & \empty & 2 & 3 & \empty \\
+		\hline
+		\empty & $\ldots$ & $\ldots$ & 6 & \empty \\
+		$\ldots$ & $\ldots$ & 4 & \empty & \empty \\
+		\hline
+		$\ldots$ & 3 & 9 & 6 & \empty \\
+		\end{tabular}
+	\end{center}
+	
+	\begin{eqnarray*}
+		3 \cdot b + 4 + \delta_1 &=& \overline{\delta_2 9} \\
+		3 \cdot b &=& \overline{\delta_2 (9 - 4 - 0)} \\
+		3 \cdot b &=& \overline{\delta_2 5}\quad (\text{Donde } b \in [0, 1, \ldots, 9] \text{ y } \,\delta_2\, \text{es el acarreo})\\
+		b &=& \dfrac{15}{3} = 5 \quad \wedge\quad \delta_2 = 1 \\
+		\\
+		3 \cdot a + 2 \cdot b + \delta_2 &=& \overline{\delta_3 3} \\
+		3 \cdot a + 10 + 1 &=& \overline{\delta_3 3} \\
+		3 \cdot a + 11 &=& \overline{\delta_3 3} \\
+		3 \cdot a &=& \overline{\delta_3 3} - 11 \\
+		3 \cdot a &=& \overline{(\delta_3 - 1)(3 - 1)} \\
+		3 \cdot a &=& \overline{(\delta_3 - 1) 2}\quad (\text{Donde } a \in [0, 1, \ldots, 9] \text{ y } \,\delta_3\, \text{es el acarreo})\\
+		a &=& \dfrac{12}{3} = 4 \quad \wedge\quad \delta_3 - 1 = 1 \vee \delta_3 = 2 \\
+	\end{eqnarray*}
+	
+	\noindent Si $452 \times 23 = \ldots 396 $, entonces $ 4 + 5 + 2 = \fbox{11}$
+}
