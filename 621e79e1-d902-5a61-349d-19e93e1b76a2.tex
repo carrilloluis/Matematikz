@@ -1,0 +1,108 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{memoir}
+
+\usepackage[margin=.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{tasks}
+\usepackage{enumerate}
+% \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Triángulos},pdfauthor={Luis Carrillo Gutiérrez}}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+
+\chapter*{Triángulos}
+\section*{Clasificación}
+\subsection*{Por sus lados}
+
+\subsubsection*{Equilátero}
+$\overline{AB} = \overline{BC} = \overline{CA}$ \\ \\ 
+\begin{tikzpicture}
+	% (0,0) - (r, 0) - (r/2, sqrt[3] /2 * r) 
+	\coordinate (a) at (0, 0);
+	\coordinate (b) at (2, 3.4641);
+	\coordinate (c) at (4, 0);
+	\draw (a) -- (b) -- (c) -- cycle;
+	\draw [black] (2, -.2) -- (2, .2);
+	\draw (.875, 2) -- (1.25, 1.75);
+	\draw (2.75, 1.75) -- (3.15, 2);
+
+	\draw pic[draw, angle radius=.5cm] {angle=c--a--b};
+	\draw (-.35, -.1) node{$A$};
+	\draw (2, 3.75) node{$B$};
+	\draw (4.35, -.075) node{$C$};
+\end{tikzpicture}
+
+\subsubsection*{Isósceles}
+\begin{tikzpicture}
+	\draw (.5, 0) -- (3.5, 0) -- (2, 3.4641) -- cycle;
+	\draw (1.1, 2) -- (1.5, 1.75);
+	\draw (2.5, 1.75) -- (2.9, 2);
+	\draw [fill=black] (2, 0) circle(0.12);
+\end{tikzpicture}
+\subsubsection*{Escaleno}
+\begin{tikzpicture}
+	\draw (0, 0) -- (5, 0) -- (.95, 3.15) -- cycle;
+	% \draw (1.1, 2) -- (1.5, 1.75);
+	\draw (.2, 1.5) -- (.7, 1.35);
+	\draw [fill=black] (2, 0) circle(0.12);
+	\draw [fill=white] (2.76, 1.5) rectangle ++(.25, .25);
+\end{tikzpicture}
+
+\subsection*{Por sus ángulos}
+
+\subsubsection*{Acutángulo}
+\begin{tikzpicture}
+	\coordinate (a) at (.25, 0);
+	\coordinate (b) at (2, 3.4641);
+	\coordinate (c) at (3.75, 0);
+	\draw (a) -- (b) -- (c) -- cycle;
+	
+	\draw pic[draw, angle radius=.5cm] {angle=c--a--b};
+	\draw pic[draw, angle radius=.4cm] {angle=a--b--c};
+	\draw pic[draw, angle radius=.35cm] {angle=b--c--a};
+
+	\draw (.95, .45) node{$\alpha$};
+	\draw (1.96, 2.75) node{$\beta$};
+	\draw (3.1, .45) node{$\gamma$};
+\end{tikzpicture}
+
+\subsubsection*{Rectángulo}
+\begin{tikzpicture}
+	\coordinate (a) at (0, 0);
+	\coordinate (b) at (0, 3.75);
+	\coordinate (c) at (3.5, 0);
+	
+	\draw (a) -- (b) -- (c) -- cycle;
+
+	\draw pic[draw, angle radius=.45cm] {right angle=c--a--b};
+	\draw pic[draw, angle radius=.35cm] {angle=a--b--c};
+	\draw pic[draw, angle radius=.45cm] {angle=b--c--a};
+
+	\draw (.73, .6) node{$\alpha$};
+	\draw (0.25, 3) node{$\beta$};
+	\draw (2.75, .35) node{$\gamma$};
+\end{tikzpicture}
+
+\subsubsection*{Obtusángulo}
+\begin{tikzpicture}
+	\coordinate (a) at (0, 0);
+	\coordinate (b) at (3.5, 3.4641);
+	\coordinate (c) at (2, 0);
+	
+	\draw (a) -- (b) -- (c) -- cycle;
+	
+	\draw pic[draw, angle radius=.25cm] {angle=c--a--b};
+	\draw pic[draw, angle radius=.6cm] {angle=a--b--c};
+	\draw pic[draw, angle radius=.35cm] {angle=b--c--a};
+
+	\draw (.5, .2) node{$\alpha$};
+	\draw (2.85, 2.5) node{$\beta$};
+	\draw (1.75, .65) node{$\gamma$};
+\end{tikzpicture}
+
+\end{document}
