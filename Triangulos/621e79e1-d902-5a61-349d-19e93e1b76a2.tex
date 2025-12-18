@@ -1,6 +1,6 @@
-\documentclass[11pt, twocolumn, landscape, a4paper]{memoir}
+\documentclass[11pt, twocolumn, a4paper]{memoir}
 
-\usepackage[margin=.75in]{geometry}
+\usepackage[margin=.5in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amssymb, amsmath, amsbsy}
@@ -19,8 +19,9 @@
 \section*{Clasificación}
 \subsection*{Por sus lados}
 
-\subsubsection*{Equilátero}
-$\overline{AB} = \overline{BC} = \overline{CA}$ \\ \\ 
+\subsubsection*{Equilátero} \noindent
+$\overline{AB} = \overline{BC} = \overline{CA}$ \\ 
+$\alpha = \beta = \gamma = 60^{\circ}$ \\ \\
 \begin{tikzpicture}
 	% (0,0) - (r, 0) - (r/2, sqrt[3] /2 * r) 
 	\coordinate (a) at (0, 0);
@@ -32,30 +33,75 @@ $\overline{AB} = \overline{BC} = \overline{CA}$ \\ \\
 	\draw (2.75, 1.75) -- (3.15, 2);
 
 	\draw pic[draw, angle radius=.5cm] {angle=c--a--b};
+	\draw pic[draw, angle radius=.5cm] {angle=a--b--c};
+	\draw pic[draw, angle radius=.5cm] {angle=b--c--a};
+	
 	\draw (-.35, -.1) node{$A$};
 	\draw (2, 3.75) node{$B$};
 	\draw (4.35, -.075) node{$C$};
+	
+	\draw (.75, .45) node{$\alpha$};
+	\draw (1.96, 2.5) node{$\beta$};
+	\draw (3.25, .45) node{$\gamma$};
 \end{tikzpicture}
 
-\subsubsection*{Isósceles}
+\subsubsection*{Isósceles}\noindent
+$\overline{AB} = \overline{BC}$ \\ 
+$\alpha = \gamma$ \\ 
 \begin{tikzpicture}
-	\draw (.5, 0) -- (3.5, 0) -- (2, 3.4641) -- cycle;
+	\coordinate (a) at (.5, 0);
+	\coordinate (b) at (2, 3.4641);
+	\coordinate (c) at (3.5, 0);
+
+	\draw (a) -- (b) -- (c) -- cycle;
 	\draw (1.1, 2) -- (1.5, 1.75);
 	\draw (2.5, 1.75) -- (2.9, 2);
 	\draw [fill=black] (2, 0) circle(0.12);
+
+	\draw pic[draw, angle radius=.5cm] {angle=c--a--b};
+	\draw pic[draw, angle radius=.5cm] {angle=a--b--c};
+	\draw pic[draw, angle radius=.5cm] {angle=b--c--a};
+	
+	\draw (0.15, -.1) node{$A$};
+	\draw (2, 3.75) node{$B$};
+	\draw (3.85, -.075) node{$C$};
+	
+	\draw (1.25, .45) node{$\alpha$};
+	\draw (1.96, 2.5) node{$\beta$};
+	\draw (2.75, .45) node{$\gamma$};
 \end{tikzpicture}
-\subsubsection*{Escaleno}
+
+\subsubsection*{Escaleno} \noindent
+$\overline{AB} \neq \overline{BC} \neq \overline{CA}$ \\ 
+$\alpha \neq \beta \neq \gamma$ \\ 
 \begin{tikzpicture}
-	\draw (0, 0) -- (5, 0) -- (.95, 3.15) -- cycle;
-	% \draw (1.1, 2) -- (1.5, 1.75);
+	\coordinate (e) at (0, 0);
+	\coordinate (f) at (.95, 3.15);
+	\coordinate (g) at (5, 0);
+
+	\draw (e) -- (f) -- (g) -- cycle;
 	\draw (.2, 1.5) -- (.7, 1.35);
 	\draw [fill=black] (2, 0) circle(0.12);
 	\draw [fill=white] (2.76, 1.5) rectangle ++(.25, .25);
+
+	\draw pic[draw, angle radius=.5cm] {angle=g--e--f};
+	\draw pic[draw, angle radius=.5cm] {angle=e--f--g};
+	\draw pic[draw, angle radius=.5cm] {angle=f--g--e};
+
+	\draw (-0.35, -.1) node{$A$};
+	\draw (1, 3.5) node{$B$};
+	\draw (5.3, -.075) node{$C$};
+
+	\draw (.65, .45) node{$\alpha$};
+	\draw (1.1, 2.2) node{$\beta$};
+	\draw (3.9, .35) node{$\gamma$};
 \end{tikzpicture}
 
 \subsection*{Por sus ángulos}
 
-\subsubsection*{Acutángulo}
+\subsubsection*{Acutángulo} \noindent
+$\alpha,\, \beta,\, \gamma < 90^{\circ}$ \\ 
+
 \begin{tikzpicture}
 	\coordinate (a) at (.25, 0);
 	\coordinate (b) at (2, 3.4641);
@@ -66,12 +112,18 @@ $\overline{AB} = \overline{BC} = \overline{CA}$ \\ \\
 	\draw pic[draw, angle radius=.4cm] {angle=a--b--c};
 	\draw pic[draw, angle radius=.35cm] {angle=b--c--a};
 
+	\draw (-.1, -.1) node{$A$};
+	\draw (2, 3.75) node{$B$};
+	\draw (4.05, -.075) node{$C$};
+
 	\draw (.95, .45) node{$\alpha$};
 	\draw (1.96, 2.75) node{$\beta$};
 	\draw (3.1, .45) node{$\gamma$};
 \end{tikzpicture}
 
-\subsubsection*{Rectángulo}
+\subsubsection*{Rectángulo} \noindent
+$\alpha = 90^{\circ}$ \\ 
+
 \begin{tikzpicture}
 	\coordinate (a) at (0, 0);
 	\coordinate (b) at (0, 3.75);
@@ -83,12 +135,18 @@ $\overline{AB} = \overline{BC} = \overline{CA}$ \\ \\
 	\draw pic[draw, angle radius=.35cm] {angle=a--b--c};
 	\draw pic[draw, angle radius=.45cm] {angle=b--c--a};
 
+	\draw (-.35, -.07) node{$A$};
+	\draw (0, 4.05) node{$B$};
+	\draw (3.85, -.075) node{$C$};
+
 	\draw (.73, .6) node{$\alpha$};
 	\draw (0.25, 3) node{$\beta$};
 	\draw (2.75, .35) node{$\gamma$};
 \end{tikzpicture}
 
-\subsubsection*{Obtusángulo}
+\subsubsection*{Obtusángulo} \noindent
+$\gamma > 90^{\circ}$ \\ 
+
 \begin{tikzpicture}
 	\coordinate (a) at (0, 0);
 	\coordinate (b) at (3.5, 3.4641);
@@ -99,6 +157,10 @@ $\overline{AB} = \overline{BC} = \overline{CA}$ \\ \\
 	\draw pic[draw, angle radius=.25cm] {angle=c--a--b};
 	\draw pic[draw, angle radius=.6cm] {angle=a--b--c};
 	\draw pic[draw, angle radius=.35cm] {angle=b--c--a};
+
+	\draw (-.35, -.07) node{$A$};
+	\draw (3.5, 3.8) node{$B$};
+	\draw (2.35, -.075) node{$C$};
 
 	\draw (.5, .2) node{$\alpha$};
 	\draw (2.85, 2.5) node{$\beta$};
