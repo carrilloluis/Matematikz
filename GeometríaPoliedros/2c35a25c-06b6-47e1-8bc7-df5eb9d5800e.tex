@@ -1,0 +1,49 @@
+\documentclass[11pt, a5paper]{memoir}
+
+\usepackage[margin=.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+% \usepackage{verbatim}
+\usepackage{mathpazo}
+\usepackage{tasks}
+% \usepackage{enumerate}
+\usepackage{graphicx} 
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Paralelepípedo Rectangular},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagenumbering{roman}
+
+\begin{document}
+\subsection*{Geometría - poliedros}
+\begin{itemize}
+\item{Calcular ``\scalebox{1.2}{$x$}'' (en el siguiente paralelepípedo rectangular): \\ \\
+\begin{tikzpicture}
+	\draw (0, 0) -- (4, 0) -- (4, 4) -- (0, 4) -- cycle;
+	\draw (0, 4) -- (1, 4.75) -- (5, 4.75) -- (4, 4);
+	\draw (5, 4.75) -- (5, 1) -- (4, 0);
+	\draw [dashed] (1, 4.75) -- (1, 1);
+	\draw [dashed] (0,0) -- (1, 1) -- (5, 1);
+	\draw [line width=.5mm] (1, 4.75) -- (4, 0);
+
+	\draw (2.1, -.35) node{$4\;\,cm$};
+	\draw (5.2, .45) node{$3\;\,cm$};
+	\draw (5.6, 2.75) node{$5\;\,cm$};
+
+	\draw (2.8, 2.5) node{$x$};
+\end{tikzpicture}
+
+\begin{tasks}(3)
+\task{$\dfrac1{2}\sqrt{2}$}
+\task{$\dfrac1{3}\sqrt{2}$}
+\task{$3\sqrt{2}$}
+\task{$4\sqrt{2}$}
+\task{$5\sqrt{2}$}
+\end{tasks}
+}
+\end{itemize}
+
+\end{document}
