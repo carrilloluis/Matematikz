@@ -1,0 +1,84 @@
+\documentclass[11pt, a5paper]{memoir}
+
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{enumerate}
+\usepackage{amsmath, amssymb, amsbsy}
+\usepackage{mathpazo}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Polinomios},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+\DeclareMathSizes{14}{14}{14}{14}
+
+\begin{document}
+\section*{Polinomios I}
+\subsection*{Expresión algebraica}
+\noindent Es una expresión matemática en la cual, para la variable o variables sólo se definen las operaciones aritméticas (adición, sustracción, multiplicación, división, potencia y raíz) un número finito de veces.
+% Ejemplo:
+\begin{description}
+\item[] $R(x) = 6x - 5$
+\item[] $S(x;y) = 29x^3 - \sqrt[7]{xy}$
+\item[] $Q(x) = 1 + x + x^2 + x^3 + \ldots$
+\end{description}
+
+\subsection*{Término algebraico}
+\noindent Es una expresión algebraica que no admite las operaciones de adición y sustracción.
+% Ejemplo:
+\begin{description}
+\item $Q(x;y) = 5x^3y^5$
+\item $R(x;y) = \dfrac{3x^3 \sqrt{y}}{2xy}$
+\end{description}
+
+\begin{enumerate}[A. ]
+\item{Partes de un término algebraico.
+$$
+P(x;y) = 5 \pi x^8 y^5
+$$
+}
+\item{Términos semejantes \\ Son aquellos términos que tienen la misma parte literal (las mismas variables afectados por los mismos exponentes).
+% Ejemplo:
+$$
+R(x;\,y) = \sqrt{2} x^3y^5 \wedge Q(x;\,y) = 5x^3y^5
+$$
+}
+\end{enumerate}
+
+\subsection*{Monomio}
+\noindent Es un término algebraico, cuyos exponentes de sus variables son números naturales.
+% Ejemplo
+\begin{description}
+\item $R(x; y) = 2x^5y^4$
+\item $Q(x; y) = \sqrt{3} xy^4$
+\end{description}
+
+\subsection*{Polinomio}
+Es aquella expresión algebraica cuyos exponentes de sus variables son enteros no negativos (positivos o cero)
+% Ejemplo
+\begin{description}
+\item{$P(x;y) = 3x^2y^5 - 2x^3y^2 - 8$ es un polinomio}
+\item{$R(x;y) = \pi x^3y^{}$ no es un polinomio}
+\item{$Q(x;y) = 2x^{-3}y^4 - 3x^2y^5$ no es polinomio}
+\end{description}
+
+\subsection*{Grados de un polinomio}
+Los grados se clasifican en:
+\begin{enumerate}
+\item{Grado Relativo (G.R) | Es el mayor exponente de la variable de referencia}
+\item{Grado Absoluto (G.A) | Se define como el grado de un polinomio. $$P() = 3x^5y^4z - 3x^2y^3z^2 + 3xy^6$$}
+\end{enumerate}
+
+\subsection*{Valor numérico}
+Es el resultado de cambiar la variable por una constante.
+% Ejemplo
+Sea $P(x) = 3x + 2$; Calcula $M = P(2) + P(0)$
+
+\subsection*{Valor numérico}
+
+\subsection*{Cambio de variable}
+Consiste en cambiar una variable por otra.
+% Ejemplo
+Sea $P(x) = 2x - 3$, calcula $P(3x - 5)$
+
+\end{document}
