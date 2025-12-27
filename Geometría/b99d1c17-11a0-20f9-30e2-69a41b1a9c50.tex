@@ -1,0 +1,45 @@
+\documentclass[11pt, a5paper]{memoir}
+
+\usepackage[margin=.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{tasks}
+% \usepackage{enumerate} \usepackage{verbatim}
+% \usepackage{graphicx} % \scalebox{1.4}{$$}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Ángulos y triángulos},pdfauthor = {Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\begin{itemize}
+\item{En la siguiente figura el lado $\overline{AC}$ es bisectriz del ángulo $\angle BAD$. Determina los ángulos interiores de los triángulos $ABC$ y $ACD$ sabiendo que $\angle BAC = y + 8^{\circ}$, $\angle CAD = x + 13^{\circ}$, \\ $\angle ABC = 3x - 6^{\circ}\quad$ y $\quad\angle ACD = \dfrac{10}{3}y + 7^{\circ}$.
+
+\begin{tikzpicture}
+	\coordinate (A) at (.75, 2.1);
+	\coordinate (B) at (0, 0);
+	\coordinate (C) at (1.5, 0);
+	\coordinate (D) at (4, 0);
+	\coordinate (E) at (5.5, 0);
+	\draw (B) -- (A) -- (D) -- cycle;
+	\draw (D) -- (E);
+	\draw (A) -- (C);
+	
+	\draw (-.25, -.25) node{$B$};
+	\draw (.75, 2.35) node{$A$};
+	\draw (1.5, -.25) node{$C$};
+	\draw (4, -.25) node{$D$};
+	\draw (5.5, -.25) node{$E$};
+
+	\draw pic[draw, angle radius=.25cm] {angle=E--D--A};
+	\draw (4.4, .5) node{$145^{\circ}$};
+\end{tikzpicture}
+% \begin{tasks}\task{}\end{tasks}
+}
+\end{itemize}
+\end{document}
