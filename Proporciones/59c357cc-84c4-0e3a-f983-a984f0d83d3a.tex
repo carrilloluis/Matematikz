@@ -1,18 +1,14 @@
 \documentclass[10pt, a5paper]{article}
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=.75in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{amssymb, amsmath, amsbsy}
-\usepackage{verbatim}
 \usepackage{mathpazo}
 \usepackage{tasks}
-\usepackage{enumerate}
-\usepackage{graphicx} % \scalebox{1.4}{$$}
-% \usepackage{tikz}
-% \usetikzlibrary{angles,quotes}
+\usepackage{graphicx}
 \usepackage[pdftex]{hyperref}
-\hypersetup{ pdftitle = {   },pdfauthor = {Luis Carrillo Gutiérrez} }
+\hypersetup{pdftitle={Ejercicios básicos de proporciones},pdfauthor={Luis Carrillo Gutiérrez} }
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -20,12 +16,50 @@
 \subsubsection*{Proporciones}
 Hallar la variable (término faltante) en la proporción  :
 \begin{itemize}
-\item{$50 - 42 = 25 - x$}
-\item{$45{.}3 - x = 18{.}0 - 0{.}03$}
-\item{$\dfrac1{3} - \dfrac1{7} = \dfrac{5}{6} - x$}
-\item{$\dfrac{x}{\Big(\dfrac{1}{5}\Big)} = \dfrac{6}{2}$}
-\item{$\dfrac{\Big(\dfrac{1}{4}\Big)}{x} = \dfrac{x}{\Big(\dfrac{9}{16}\Big)}$}
-\item{$\dfrac{8}{x} = \dfrac{16}{4}$}
+\item{\scalebox{1.2}{$50 - 42 = 25 - x$}
+\begin{eqnarray*}
+50 - 42 &=& 25 - x \\
+50 - 25 - 42 &=& 25 - 25 - x \\
+- 17 &=& - x \qquad\implies\qquad x = 17
+\end{eqnarray*}
+}
+\item{\scalebox{1.2}{$45{.}3 - x = 18{.}0 - 0{.}03$}
+\begin{eqnarray*}
+45{.}3 - x &=& 18{.}0 - 0{.}03 \\
+45{.}3 - 45{.}3 - x &=& 18{.}0 - 0{.}03 - 45{.}3 \\
+- x &=& 18{.}0 - 45{.}33 \qquad\implies\qquad x = 27{.}33 
+\end{eqnarray*}
+}
+\item{\scalebox{1.2}{$\dfrac1{3} - \dfrac1{7} = \dfrac{5}{6} - x$}
+\begin{eqnarray*}
+\dfrac1{3} - \dfrac1{7} &=& \dfrac{5}{6} - x \\
+\dfrac1{3} - \dfrac1{7} - \dfrac{5}{6} &=& \dfrac{5}{6} - \dfrac{5}{6} - x \\
+\dfrac1{3} - \dfrac{41}{42} &=& - x \\
+- \dfrac{81}{126} &=& - x \qquad\implies\qquad x = \dfrac{9}{14}  
+\end{eqnarray*}
+}
+\item{\scalebox{1.2}{$\dfrac{x}{\Big(\dfrac{1}{5}\Big)} = \dfrac{6}{2}$}
+\begin{eqnarray*}
+\dfrac{x}{\Big(\dfrac{1}{5}\Big)} &=& \dfrac{6}{2} \\
+x &=& \Big(\dfrac{6}{2}\Big) \cdot \Big(\dfrac{1}{5}\Big) \qquad\implies\qquad x = \dfrac{3}{5}
+\end{eqnarray*}
+}
+\item{\scalebox{1.2}{$\dfrac{\Big(\dfrac{1}{4}\Big)}{x} = \dfrac{x}{\Big(\dfrac{9}{16}\Big)}$}
+\begin{eqnarray*}
+\dfrac{\Big(\dfrac{1}{4}\Big)}{x} &=& \dfrac{x}{\Big(\dfrac{9}{16}\Big)} \\
+\Big(\dfrac{1}{4}\Big) \cdot \Big(\dfrac{9}{16}\Big) &=& x \cdot x \\
+\dfrac{9}{4 \cdot 16} &=& x^2 \\
+\dfrac{3^2}{2^2 \cdot 4^2} &=& x^2 \\
+\Big(\dfrac{3}{2 \cdot 4}\Big)^2 &=& x^2 \qquad\implies\qquad x = \dfrac{3}{8}
+\end{eqnarray*}
+}
+\item{\scalebox{1.2}{$\dfrac{8}{x} = \dfrac{16}{4}$}
+\begin{eqnarray*}
+\dfrac{8}{x} &=& \dfrac{16}{4} \\
+\dfrac{8 \cdot 4}{16} &=& x \\
+\dfrac{2 \cdot 4 \cdot 4}{4 \cdot 4} &=& x \qquad\implies\qquad x = 2
+\end{eqnarray*}
+}
 \end{itemize}
 
 \end{document}
