@@ -10,6 +10,7 @@
 \hypersetup{pdftitle={Ecuaciones},pdfauthor={Luis Carrillo Gutiérrez}}
 
 \renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
 
 \begin{document}
 \subsection*{Ecuaciones}
@@ -21,7 +22,14 @@
 \task{5}
 \task{4}
 \task{6}
-\end{tasks}}
+\end{tasks}
+\begin{eqnarray*}
+1 - \dfrac{2}{3 - \dfrac{4}{5 - \dfrac{6}{x}}} &=& 0 \qquad\to\qquad \dfrac{2}{3 - \dfrac{4}{5 - \dfrac{6}{x}}} = 1 \\
+3 - \dfrac{4}{5 - \dfrac{6}{x}} &=& 2 \qquad\to\qquad 3 - 3 - \dfrac{4}{5 - \dfrac{6}{x}} = 2 - 3 \\
+- \dfrac{4}{5 - \dfrac{6}{x}} &=& - 1 \qquad\to\qquad 4 = 5 - \dfrac{6}{x} \\
+5 - 5 - \dfrac{6}{x} &=& 4 - 5 \qquad\to\quad -1 = - \dfrac{6}{x} \implies \fbox{x = 6}
+\end{eqnarray*}}
+\newpage
 \item{Resolver : $\dfrac{2}{5}\Big[x - \dfrac{5}{3}(x + 4)\Big] = \dfrac{x - 3}{3} - \dfrac{2}{3}(x + 2)$
 \begin{tasks}(5)
 \task{2}
@@ -29,7 +37,72 @@
 \task{5}
 \task{4}
 \task{7}
-\end{tasks}}
+\end{tasks}
+\begin{eqnarray*}
+\dfrac{2}{5}\Big[x - \dfrac{5}{3}(x + 4)\Big] &=& \dfrac{x - 3}{3} - \dfrac{2}{3}(x + 2) \\
+\dfrac{2}{5}\Big[x - \dfrac{5}{3}(x + 4)\Big] &=& \dfrac{x}{3} - \dfrac{3}{3} - \dfrac{2x}{3} - \dfrac{4}{3} \\
+\dfrac{2}{5}\Big[x - \dfrac{5x}{3} - \dfrac{20}{3}\Big] &=& - \dfrac{x}{3} - \dfrac{7}{3} \\
+\dfrac{2x}{5} - \dfrac{2x}{3} - \dfrac{8}{3} &=& - \dfrac{x}{3} - \dfrac{7}{3} \\
+ - \dfrac{4x}{15} - \dfrac{8}{3} &=& - \dfrac{x}{3} - \dfrac{7}{3} \\
+ \dfrac{x}{3} - \dfrac{4x}{15} &=&  - \dfrac{7}{3} + \dfrac{8}{3} \\
+ \dfrac{5x}{15} - \dfrac{4x}{15} &=&  - \dfrac{7}{3} + \dfrac{8}{3} \\
+ \dfrac{x}{15} &=& \dfrac{1}{3} \quad\to\quad \fbox{x = 5}
+\end{eqnarray*}}
+\newpage
+\item{Resolver para ``$x$'' : $$\dfrac{x + m}{n} - \dfrac{x - n}{m} = 2$$ y dar como respuesta el opuesto de ``$x$''.
+\begin{tasks}(5)
+\task{m - n}
+\task{n - m}
+\task{m + n}
+\task{m - 1}
+\task{mn - 1}
+\end{tasks}
+\begin{eqnarray*}
+\dfrac{x + m}{n} - \dfrac{x - n}{m} &=& 2 \\
+\dfrac{x}{n} + \dfrac{m}{n} - \dfrac{x}{m} + \dfrac{n}{m} &=& 2 \\
+\dfrac{x}{n} - \dfrac{x}{m} + \dfrac{m}{n} + \dfrac{n}{m} &=& 2 \\
+\dfrac{x(m)}{(m)n} - \dfrac{x(n)}{m(n)} + \dfrac{m(m)}{n(m)} + \dfrac{n(n)}{m(n)} &=& 2 \\
+\dfrac{(m - n)x}{mn} + \dfrac{m^2 + n^2}{mn} &=& 2 \\
+\dfrac{(m - n)x + (m^2 + n^2)}{mn} &=& 2 \\
+(m - n)x + (m^2 + n^2) &=& 2\cdot mn \\
+m^2 - 2mn + n^2 &=&  (n - m)x \\
+n^2 - 2mn + m^2 &=&  (n - m)x \\
+(n -m)^2 &=&  (n - m)x \\ 
+x &=& n - m \quad\implies\quad \fbox{x = m - n} \\
+\end{eqnarray*}}
+\newpage
+\item{Despejar ``$x$'' en : $$\qquad ab(x + c) + bc(x - a) = ca(b - x)$$.
+\begin{tasks}(3)
+\task{$\dfrac{3abc}{ab + bc + ca}$}
+\task{$\dfrac{abc}{ab + bc + ca}$}
+\task{$\dfrac{a + b + c}{abc}$}
+\task{$\dfrac{ab + bc + ca}{abc}$}
+\task{$\dfrac{a + b + c}{ab + bc + ca}$}
+\end{tasks}
+\begin{eqnarray*}
+ab \cdot (x + c) + bc \cdot (x - a) &=& ca \cdot (b - x) \\
+abx + abc + bcx - abc &=& abc - cax \\
+abx + bcx &=& abc - cax \\
+abx + bcx + cax &=& abc \\
+(ab + bc + ca)x &=& abc \\
+x &=& \dfrac{abc}{ab + bc + ca}
+\end{eqnarray*}}
+\newpage
+\item{Resolver: $\quad\dfrac{x}{a + b} + \dfrac{x}{a - b} = 2$; $a \neq 0$
+\begin{tasks}(3)
+\task{$\dfrac{(a^2 + b^2)}{a}$}
+\task{$\dfrac{(a^2 - b^2)}{a}$}
+\task{$\dfrac{(a + b)}{a}$}
+\task{$\dfrac{(a^2 + b^2)}{b}$}
+\task{$\dfrac{(a^2 - b^2)}{b}$}
+\end{tasks}
+\begin{eqnarray*}
+\dfrac{x}{a + b} + \dfrac{x}{a - b} = 2 \\
+\dfrac{x\,(a - b)}{(a + b)(a - b)} + \dfrac{x\,(a + b)}{(a - b)(a + b)} &=& 2 \\
+\dfrac{x\,[(a - b) + (a + b)]}{(a^2 - b^2)} &=& 2 \\
+\dfrac{x\,[2a]}{(a^2 - b^2)} &=& 2 \\
+x &=& \dfrac{2\,(a^2 - b^2)}{2a} \\
+x &=& \dfrac{a^{2} - b^{\,2}}{a}
+\end{eqnarray*}}
 \end{itemize}
-
 \end{document}
