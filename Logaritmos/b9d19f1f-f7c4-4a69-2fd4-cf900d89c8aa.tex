@@ -1,0 +1,35 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Conceptos en Logaritmos},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\section*{Logaritmos}
+\subsection*{Definición}
+$$\log_{\,b}{N} = x\quad \implies \quad b^{x} = N$$
+\subsection*{Propiedades}
+\begin{enumerate}
+\item{En el campo de los números reales ($\mathbb{R}$); no existe logaritmo de números negativos.}
+\item{La base de un logaritmo debe ser siempre positiva y diferente de la unidad.}
+\item{La identidad logarítmica fundamental se expresa como : \scalebox{1.2}{$b^{\,\log_{\,b}{N}} = N$}}
+\item{El logaritmo de la unidad en cualquier base es cero : \scalebox{1.2}{$\log_{\,b}1 = 0$}}
+\item{El logaritmo de la base será  siempre igual a la unidad : \scalebox{1.2}{$\log_{\,b}{b} = 1$}}
+\item{Logaritmo de un producto : \scalebox{1.2}{$\log_{\,b}{a \cdot c} = \log_{\,b}{a} + \log_{\,b}{c}$}}
+\item{Logaritmo de un cociente : \scalebox{1.2}{$\log_{\,b}{\Big(\dfrac{a}{c}\Big)} = \log_{\,b}{a} - \log_{\,b}{c}$}}
+\item{Logaritmo de una potencia : \scalebox{1.2}{$\log_{\,b}{a^{c}} = c\cdot \log_{\,b}{a}$}}
+\item{Logaritmo cuya base es una potencia : \scalebox{1.25}{$\log_{\,b^{c}}{a} = \frac1{c}\cdot \log_{\,b}{a}$}\\ $\implies$ \scalebox{1.25}{$\log_{\,a^{c}}{a^{d}} = \frac{d}{c}$}}
+\item{Cambio de base de un logaritmo : \scalebox{1.2}{$\log_{\,b}{a} = \dfrac{\log_{\,c}{a}}{\log_{\,c}{b}}$}}
+\end{enumerate}
+\end{document}
