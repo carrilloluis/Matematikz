@@ -1,0 +1,65 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{verbatim}
+\usepackage{mathpazo}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{graphicx} % \scalebox{1.4}{$$}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Algebra},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+\subsection*{Álgebra}
+\paragraph*{Expresiones algebraicas} -- Una {\tt expresión algebraica} es una combinación de variables i/o constantes en cantidades finitas, en el que intervienen las operaciones fundamentales (adición, sustracción, multiplicación, división, potenciación y radicación), sin variables en los exponentes.
+$$
+x^{2}y^{5} - \sqrt{2}\,x^{3} + \dfrac{4y}{z^{2}} + 5x^{6}y^{3}
+$$ 
+
+\paragraph{Expresiones algebraicas racionales} -- Son aquellas expresiones algebraicas  cuyas variables no están afectas por radicales.
+$$
+\dfrac{3}{2}x^{3}y^{-9} + \dfrac{x^{4}y}{z^{3}} - 4x^{6}
+$$
+\paragraph{Expresiones algebraicas racionales enteras}
+Una expresión algebraica es racional entera cuando los exponentes de sus variables son números enteros mayores o iguales a cero i/o que las variables no están en el denominador.
+$$
+7x^{5} - \sqrt{3}\,x^{2}y^{5} - y^{4}z^{3}
+$$
+
+\subsubsection*{Polinomio}
+\noindent Un polinomio es una {\tt expresión algebraica racional entera}, con una o más variables.
+\begin{eqnarray*}
+P(x) &=& \sqrt{3}a\,x^{7}\qquad\qquad\qquad\text{\scriptsize Monomio de una variable} \\
+P(x, y, z) &=& 4x^{3}y^{7}z^{5}\qquad\qquad\qquad\text{\scriptsize Monomio de tres variables} \\ 
+P(x, y) &=& \sqrt{3}\,x^{7}y^{3} + y^{2} - xy^{5}\qquad\text{\scriptsize Trinomio de dos variables} 
+\end{eqnarray*}
+
+El polinomio con (en) la variable $x$ está representado (forma general) por:
+$$
+P(x) = a_{n}x^{n} + a_{n-1}x^{n-1} + a_{n-2}x^{n-2} + \ldots + a_{1}x + a_{0} \qquad a_{n} \neq 0
+$$
+
+\noindent Este polinomio se conoce (también) como {\tt polinomio entero de $n + 1$ términos}.
+
+\noindent Donde :
+
+$n \in \mathbb{Z}^{+}$
+$a_n$
+$a_0$
+
+Observaciones
+
+Grado de un polinomio
+Es una característica en relación a los exponentes de las variables, el cual es el número entero mayor o igual a cero.
+
+Clases de grados.
+Grado relativo De un monomio, es el exponente de la variable indicada.
+
+En el monomio $P(x, y, z) = \sqrt[4]{3}x^5y^9z^{12}$ 
+$GR(x) = 5$  
+
+\end{document}
