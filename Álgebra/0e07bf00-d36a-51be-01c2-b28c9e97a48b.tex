@@ -6,6 +6,7 @@
 \usepackage{amssymb, amsmath, amsbsy}
 \usepackage{tasks}
 \usepackage{enumerate}
+\usepackage{enumitem}
 \usepackage{graphicx}
 
 \usepackage[pdftex]{hyperref}
@@ -20,13 +21,26 @@
 
 \begin{itemize}
 \item{Dados los polinomios: \quad$P(x) = 3x + 2$; \quad$Q(x + 1) = 2x - 5$\\ Hallar el valor numérico en las siguientes expresiones:
-\begin{itemize}
-\item[\S]{$P(x - 1) + Q(x + 2)$}
+\begin{itemize}[label=$\circ\;$]
+\item{$P(x - 1) + Q(x + 2)$}
 \item{$P(Q(x))$}
 \item{$Q(P(x)) - 10$}
 \item{$P(P(x + 1))$}
-\item[\S]{$P(2 - x) - Q(-x)$}
+\item{$P(2 - x) - Q(-x)$}
+\item{$P(4x) + Q(7 - x)$}
+\item{$2P(2x) - 3Q(x - 3)$}
+\item{$P(P(P(x))) - 8$}
 \end{itemize}
+}
+\item{De un polinomio $P(x)$ de segundo grado se sabe que : $P(1) = 4$; $P(0) = 5$; $P(-2) + P(2) = 26$, entonces el valor de $P(3)$ viene a ser :
+\begin{tasks}(5)
+\task{10}\task{11}\task{12}
+\end{tasks}
+}
+\item{Sean las expresiones : \quad$F(\sqrt{x} + 1) = x^{2} + x + 2$; \quad$G(\dfrac{2x - 3}{x + 4}) = 3x + 1$. \\ Calcular : $F(4) + G(1)$
+\begin{tasks}(5)
+\task{96}\task{104}\task{116}
+\end{tasks}
 }
 \end{itemize}
 \end{document}
