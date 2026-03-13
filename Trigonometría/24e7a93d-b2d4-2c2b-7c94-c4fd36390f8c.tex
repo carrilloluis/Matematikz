@@ -1,0 +1,53 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Trigonometría},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\subsection*{Trigonometría}
+\paragraph*{Definición de las funciones trigonométricas} -- \\
+\noindent En el siguiente triángulo de lados \scalebox{1.2}{$a$}, \scalebox{1.2}{$b$} y \scalebox{1.2}{$c$} con ángulos \scalebox{1.1}{$A$}, \scalebox{1.1}{$B$} y \scalebox{1.1}{$C$} se definen las siguientes funciones trigonométricas. \\ 
+
+\begin{tikzpicture}
+	\coordinate (A) at (0, 0);
+	\coordinate (B) at (3.5, 2.1);
+	\coordinate (C) at (3.5, 0);
+	\draw [thick](B) -- (A) -- (C) -- cycle;
+
+	\draw (-.25, -.15) node{$A$};
+	\draw (3.8, 2.25) node{$B$};
+	\draw (3.77, -.15) node{$C$};
+
+	\draw (3.75, 1.03) node{$a$};
+	\draw (1.8, -.25) node{$b$};
+	\draw (1.76, 1.35) node{$c$};
+
+	\draw pic[draw, angle radius=.35cm] {right angle=B--C--A};
+\end{tikzpicture}
+
+\noindent En referencia al ángulo $A$:
+\begin{itemize}
+\item{$\text{seno}\,A = \sen A = \dfrac{a}{c} = \dfrac{\text{Cateto opuesto}}{\text{Hipotenusa}}$}
+\item{$\text{coseno}\,A = \cos A = \dfrac{b}{c} = \dfrac{\text{Cateto adyacente}}{\text{Hipotenusa}}$}
+\item{$\text{tangente}\,A = \tan A = \dfrac{a}{b} = \dfrac{\text{Cateto opuesto}}{\text{Cateto adyacente}}$}
+\item{$\text{cotangente}\,A = \cot A = \dfrac{b}{a} = \dfrac{\text{Cateto adyacente}}{\text{Cateto opuesto}}$}
+\item{$\text{secante}\,A = \sec A = \dfrac{c}{b} = \dfrac{\text{Hipotenusa}}{\text{Cateto adyacente}}$}
+\item{$\text{cosecante}\,A = \csc A = \dfrac{c}{a} = \dfrac{\text{Hipotenusa}}{\text{Cateto opuesto}}$}
+\end{itemize}
+\end{document}
