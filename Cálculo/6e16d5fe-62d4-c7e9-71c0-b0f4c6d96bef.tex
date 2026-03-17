@@ -1,0 +1,101 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx} % \usepackage{mathabx} \usepackage{stmaryrd}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Funciones},pdfauthor={Luis Carrillo Gutiérrez}}
+
+% \DeclareMathDelimiter{\ldbrack}{4}{matha}{"76}{mathx}{"30}
+% \DeclareMathDelimiter{\rdbrack}{5}{matha}{"77}{mathx}{"38}
+\setlength{\columnsep}{1cm}
+
+\fontfamily{cmss}\selectfont
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\subsubsection*{Funciones matemáticas especiales}
+
+\paragraph*{Función constante} -- \\  
+
+\noindent La {\tt función constante} es aquella función matemática que toma el mismo valor para cualquier
+valor de la variable \scalebox{1.1}{$x$}. Se la representa de la forma : $f(x) = c$\quad ó \quad$y = c$. \\ \\ \noindent Donde : \\ 
+
+\begin{tabular}{lcl} 
+Constante & : & \scalebox{1.2}{$\{c\}$} \\
+Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+Rango & : & $R_{f} = \{c\}$
+\end{tabular}
+
+% \begin{}
+
+\paragraph*{Función Identidad} -- \\ \noindent Se le representa como: $f(x) = x$\quad ó \quad$y = x$, Su representación gráfica en el plano cartesiano (eje de coordenadas), viene dado por la línea recta que cruza el origen subiendo en ángulo de $45^{\circ}$ hacia la derecha. \\ \\ \noindent Donde : \\
+
+\begin{tabular}{lcl}
+Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+Rango & : & $R_{f} = \mathbb{R}$ 
+\end{tabular}
+
+\paragraph*{Función Líneal} -- \\ \noindent Función {\tt polinómica de primer grado}, es decir una función cuya representación en el plano cartesiano es una línea recta. Esta función se puede escribir/representar como : $f(x) = ax + b$\quad ó \quad$y = ax + b$. \\ \\ \noindent Donde : \\
+
+\begin{tabular}{lcl} 
+Constante (reales) & : & \scalebox{1.2}{$a$} $\neq 0$, $b$ \\
+Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+Rango & : & $R_{f} = \mathbb{R}$
+\end{tabular}
+
+\paragraph*{Función Raíz cuadrada} -- \\ \noindent Es la parte de una parábola, relativa al eje $x$ positivo. Se representa mediante : $f(x) = \sqrt{x}$\quad ó \quad$y^2 = x$. \\ \\ \noindent Donde : \\
+
+\begin{tabular}{lcl} 
+Dominio & : & $D_{f} = \mathbb{R}^{+}_{0}$ \\ 
+Rango & : & $R_{f} = \mathbb{R}^{+}_{0}$
+\end{tabular}
+
+
+\paragraph*{Función Valor Absoluto} -- \\ \noindent Se representa como : $f(x) = |x|$ y definida como : $f(x) = |x| = \left\{\begin{aligned} x,\quad x \ge 0 \\ -x,\quad x < 0 \end{aligned} \right.$. \\ \\ \noindent Donde : \\
+
+\begin{tabular}{lcl} 
+Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+Rango & : & $R_{f} = \mathbb{R}^{+}_{0}$
+\end{tabular}
+
+\paragraph*{Función Máximo entero} -- \\ \noindent Se representa como : $f(x) = [\![ x ]\!]$\quad ó \quad$y = [\![x]\!]$ y definida como : $[\![\,x\,]\!] = n \iff n \le x < n + 1,\quad n \in \mathbb{Z}$ \\ \\ \noindent Donde : \\
+% \ldbrack   \rdbrack 		\llbracket x \rrbracket
+% \lbrack x \rbrack
+% \lfloor \pi \rfloor = 3  \left\lfloor \frac{1+x}{2} \right\rfloor
+\begin{tabular}{lcl} 
+Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+Rango & : & $R_{f} = \mathbb{Z}$
+\end{tabular}
+
+\paragraph*{Función Signo} -- \\ \noindent Se representa como : $f(x) = sgn(x)$ y definida como : \\ $y = f(x) = sgn(x) = \left\{\begin{aligned} 1,\quad x > 0 \\ 0,\quad x = 0 \\ -1,\quad x < 0 \end{aligned} \right.$. \\ \\ \noindent Donde : \\
+
+\begin{tabular}{lcl} 
+Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+Rango & : & $R_{f} = \{ -1, 0, 1\}$
+\end{tabular}
+
+\paragraph*{Función Cuadrática} -- \\ \noindent Es una {\tt función polinómica de segundo grado}; es decir, una función cuya representación en el plano cartesiano es un parábola paralela al eje $y$. Esta se escribe/representa como : $f(x) = ax^{2} + bx + c$. \\ \\ \noindent Donde : \\
+
+\begin{tabular}{lcl} 
+Constante (reales) & : & $a \neq 0$, $b$ y $c$ \\ 
+Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+Rango & : & {\scriptsize Si $a > 0$, entonces se abre hacia arriba} \\
+\empty & \empty & {\scriptsize Si $a < 0$, entonces se abre hacia abajo.}  % $R_{f} = \{ -1, 0, 1\}$
+\end{tabular}
+
+\paragraph*{Función Polinomial} -- \\ \noindent
+Esta definida como : $f(x) = a_{n}\,x^{n} + a_{n - 1}\,x^{n - 1} + \ldots + a_{1}\,x + a_{0}$ \\ \\ \noindent Donde : \\
+
+\begin{tabular}{lcl} 
+Coeficientes & : & $a_{n},\,a_{n - 1},\,\ldots,\,a_{1} \in \mathbb{R} \wedge a_{n} \neq 0$ \\
+Dominio & : & {\scriptsize Varían acorde al gráfico} \\ % $D_{f} = \mathbb{R}$
+Rango & : & {\scriptsize Varían acorde al gráfico} % $R_{f} = \{ -1, 0, 1\}$
+\end{tabular}
+\end{document}
