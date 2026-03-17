@@ -1,0 +1,65 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Trigonometría},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\subsection*{Relación entre lados y ángulos para cualquier triángulo}
+
+\noindent Los siguientes resultados se cumplen para cualquier triángulo de lados \scalebox{1.2}{$a$}, \scalebox{1.2}{$b$}, \scalebox{1.2}{$c$} son ángulos \scalebox{1.1}{$A$}, \scalebox{1.1}{$B$} y \scalebox{1.1}{$C$}. \\
+
+\begin{tikzpicture}
+	\coordinate (A) at (0, 0);
+	\coordinate (B) at (1.5, 3.25);
+	\coordinate (C) at (3.5, 0);
+	\draw [thick](B) -- (A) -- (C) -- cycle;
+
+	\draw (-.25, -.2) node{$A$};
+	\draw (1.5, 3.56) node{$B$};
+	\draw (3.77, -.15) node{$C$};
+
+	\draw pic[draw, angle radius=.35cm] {angle=B--C--A};
+	\draw pic[draw, angle radius=.5cm] {angle=A--B--C};
+	\draw pic[draw, angle radius=.65cm] {angle=C--A--B};
+
+	\draw (2.88, 1.5) node{$a$};
+	\draw (1.8, -.25) node{$b$};
+	\draw (.45, 1.6) node{$c$};
+\end{tikzpicture}
+
+\begin{itemize}
+\item{Ley de los senos
+$$
+\dfrac{a}{\sen A} = \dfrac{b}{\sen B} = \dfrac{c}{\sen C}
+$$
+}
+\item{Ley de los cosenos
+$$
+a^{2} = b^{2} + c^{2} - 2 \cdot (b \cdot c) \cdot \cos A
+$$
+}
+\item{Ley de los tangentes
+$$
+\dfrac{a + b}{a - b} = \dfrac{\tan\; \dfrac1{2}(A + B)}{\tan\; \dfrac1{2}(A - B)}
+$$
+}
+\end{itemize}
+
+% De manera análoga para los otros lados.
+\end{document}
