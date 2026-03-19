@@ -7,61 +7,130 @@
 \usepackage{tasks}
 \usepackage{enumerate}
 \usepackage{enumitem}
+\usepackage{verbatim}
 \usepackage{graphicx} % \usepackage{mathabx} \usepackage{stmaryrd}
+\usepackage{multicol}
+
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+
 \usepackage[pdftex]{hyperref}
 \hypersetup{pdftitle={Funciones},pdfauthor={Luis Carrillo Gutiérrez}}
 
 % \DeclareMathDelimiter{\ldbrack}{4}{matha}{"76}{mathx}{"30}
 % \DeclareMathDelimiter{\rdbrack}{5}{matha}{"77}{mathx}{"38}
-\setlength{\columnsep}{1cm}
+\setlength{\columnsep}{2cm}
 
 \fontfamily{cmss}\selectfont
 \renewcommand{\familydefault}{\sfdefault}
 \pagestyle{empty}
 
 \begin{document}
+\begin{comment}
+Una función matemática o función en cálculo es una *relación que se establece con una variable que depende de otra*. O sea, una magnitud es función de otra si el valor de la primera depende del valor de la segunda.
+
+En otras palabras, una función *relaciona una variable dependiente*, es decir, que depende de otra variable, *con una variable independiente*. La variable independiente es la que cambia de valor para determinar qué magnitud presentará la variable dependiente.
+
+De forma algebraica, la función se expresa o se denota de la siguiente forma:
+
+*f: A → B*
+
+En el que:
+
+  * */f/* es la función;
+  * */A/* corresponde al dominio de la función /f/ o el conjunto de
+    elementos de partida;
+  * y */B/* al codomonio de la función o el conjunto de llegada.
+
+Del codominio /B/ surge las imágenes de la función, que son los valores
+relacionados con elementos del dominio /A/. Por ejemplo, digamos que a
+la función *y = 2x* denotamos el dominio /A/, o /x/, como los números
+naturales del 2 al 6, y el codominio /B/, o /y/, como los números pares
+del 2 al 16.
+
+Podemos elaborar entonces la siguiente tabla:
+
+Valor de x en dominio A 	Imagen de la función 	Elementos del codominio B
+- 	- 	2
+2 	4 	4
+3 	6 	6
+4 	8 	8
+5 	10 	10
+6 	12 	12
+- 	- 	14
+- 	- 	16
+
+En el ejemplo, los valores 2 al 6 del dominio /A/ son la variable independiente, pues es el valor que modificamos para que nos dé la imagen de la función. A su vez, las imágenes corresponden a elementos del /B/ relacionados con /A/, y podemos fijarnos en que quedan elementos del /B/ sin asociarse.
+
+Usualmente, la operación de la función se representa con f(x) o con g(x), que en los gráficos equivale al eje de ordenadas o /y/.
+\end{comment}
+
+\subsubsection*{Tipos de funciones matemáticas}
+% Tipos de funciones matemáticas: inyectivas, sobreyectivas y biyectivas
+
+\noindent Las funciones matemáticas se clasifican en tres tipos principales según la relación entre los elementos del dominio \iffalse /A/ \fi y el rango (codominio)\iffalse /B/ \fi.
+
+\begin{enumerate}
+\item{{\tt Funciones inyectivas} -- Son aquellas en que a cada elemento del dominio le corresponde un elemento en el rango. A su vez, ningún elemento del dominio comparte con otro elemento una misma imagen en el rango, y puede haber elementos en el codominio que no se relacionen con ningún elemento en el dominio.}
+\item{{\tt Funciones sobreyectivas} -- También denominadas funciones subyectivas, aquí todo elemento del codominio es una imagen de por lo menos un elemento del dominio. Por tanto, se diferencia de la inyectiva en que nunca quedan elementos en el rango sin relacionarse con elementos del dominio.}
+\item{{\tt Funciones biyectivas} -- Una función biyectiva es a la vez una función inyectiva y sobreyectiva. Por ende a cada elemento del dominio le corresponde a un único elemento en el codominio, y no quedan imágenes sin asociar. Por tanto, el dominio y el rango presentan el mismo número de elementos.}
+\end{enumerate}
+
 \subsubsection*{Funciones matemáticas especiales}
+% existen diversos tipos de funciones según los términos que las componen
+\paragraph*{Función constante} -- La {\tt función constante} es aquella función matemática que toma el mismo valor para cualquier
+valor de la variable \scalebox{1.1}{$x$}. Se la representa de la forma : $f(x) = c$\quad ó \quad$y = c$. 
+\begin{comment}
+Son aquellas descritas como *f(x) = c*, en que /c/ es una constante. Como para todo valor de /x/ siempre se obtiene la misma imagen (el valor dado por /c/), la función se representa en una gráfica como una recta horizontal paralela al eje de abscisas o de /x/.
+\end{comment}
 
-\paragraph*{Función constante} -- \\  
+\begin{multicols}{2}
+\noindent Donde : \\
 
-\noindent La {\tt función constante} es aquella función matemática que toma el mismo valor para cualquier
-valor de la variable \scalebox{1.1}{$x$}. Se la representa de la forma : $f(x) = c$\quad ó \quad$y = c$. \\ \\ \noindent Donde : \\ 
-
-\begin{tabular}{lcl} 
+\begin{tabular}{lcl}
 Constante & : & \scalebox{1.2}{$\{c\}$} \\
-Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+Dominio & : & $D_{f} = \mathbb{R}$ \\
 Rango & : & $R_{f} = \{c\}$
 \end{tabular}
-
-% \begin{}
+\vfill\null
+\columnbreak
+\begin{tikzpicture}
+	\draw[very thin,color=gray!15,step=.5] (-2, -2) grid (2, 2);
+	\draw[-latex] (-2.7, 0) -- (2.7, 0) node[right] {$x$};
+	\draw[-latex] (0, -2.2) -- (0, 2.7) node[above] {$y$};
+	\coordinate [label=below left:O] (a) at (0,0);
+	\draw [line width=0.35mm] (-2.7, 1) -- (2.7, 1);
+	\draw (-2.9, 1) node{$c$};
+\end{tikzpicture}
+\end{multicols}
 
 \paragraph*{Función Identidad} -- \\ \noindent Se le representa como: $f(x) = x$\quad ó \quad$y = x$, Su representación gráfica en el plano cartesiano (eje de coordenadas), viene dado por la línea recta que cruza el origen subiendo en ángulo de $45^{\circ}$ hacia la derecha. \\ \\ \noindent Donde : \\
 
 \begin{tabular}{lcl}
-Dominio & : & $D_{f} = \mathbb{R}$ \\ 
-Rango & : & $R_{f} = \mathbb{R}$ 
+Dominio & : & $D_{f} = \mathbb{R}$ \\
+Rango & : & $R_{f} = \mathbb{R}$
 \end{tabular}
 
 \paragraph*{Función Líneal} -- \\ \noindent Función {\tt polinómica de primer grado}, es decir una función cuya representación en el plano cartesiano es una línea recta. Esta función se puede escribir/representar como : $f(x) = ax + b$\quad ó \quad$y = ax + b$. \\ \\ \noindent Donde : \\
 
-\begin{tabular}{lcl} 
+\begin{tabular}{lcl}
 Constante (reales) & : & \scalebox{1.2}{$a$} $\neq 0$, $b$ \\
-Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+Dominio & : & $D_{f} = \mathbb{R}$ \\
 Rango & : & $R_{f} = \mathbb{R}$
 \end{tabular}
 
 \paragraph*{Función Raíz cuadrada} -- \\ \noindent Es la parte de una parábola, relativa al eje $x$ positivo. Se representa mediante : $f(x) = \sqrt{x}$\quad ó \quad$y^2 = x$. \\ \\ \noindent Donde : \\
 
-\begin{tabular}{lcl} 
-Dominio & : & $D_{f} = \mathbb{R}^{+}_{0}$ \\ 
+\begin{tabular}{lcl}
+Dominio & : & $D_{f} = \mathbb{R}^{+}_{0}$ \\
 Rango & : & $R_{f} = \mathbb{R}^{+}_{0}$
 \end{tabular}
 
 
 \paragraph*{Función Valor Absoluto} -- \\ \noindent Se representa como : $f(x) = |x|$ y definida como : $f(x) = |x| = \left\{\begin{aligned} x,\quad x \ge 0 \\ -x,\quad x < 0 \end{aligned} \right.$. \\ \\ \noindent Donde : \\
 
-\begin{tabular}{lcl} 
-Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+\begin{tabular}{lcl}
+Dominio & : & $D_{f} = \mathbb{R}$ \\
 Rango & : & $R_{f} = \mathbb{R}^{+}_{0}$
 \end{tabular}
 
@@ -69,23 +138,23 @@ Rango & : & $R_{f} = \mathbb{R}^{+}_{0}$
 % \ldbrack   \rdbrack 		\llbracket x \rrbracket
 % \lbrack x \rbrack
 % \lfloor \pi \rfloor = 3  \left\lfloor \frac{1+x}{2} \right\rfloor
-\begin{tabular}{lcl} 
-Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+\begin{tabular}{lcl}
+Dominio & : & $D_{f} = \mathbb{R}$ \\
 Rango & : & $R_{f} = \mathbb{Z}$
 \end{tabular}
 
 \paragraph*{Función Signo} -- \\ \noindent Se representa como : $f(x) = sgn(x)$ y definida como : \\ $y = f(x) = sgn(x) = \left\{\begin{aligned} 1,\quad x > 0 \\ 0,\quad x = 0 \\ -1,\quad x < 0 \end{aligned} \right.$. \\ \\ \noindent Donde : \\
 
-\begin{tabular}{lcl} 
-Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+\begin{tabular}{lcl}
+Dominio & : & $D_{f} = \mathbb{R}$ \\
 Rango & : & $R_{f} = \{ -1, 0, 1\}$
 \end{tabular}
 
 \paragraph*{Función Cuadrática} -- \\ \noindent Es una {\tt función polinómica de segundo grado}; es decir, una función cuya representación en el plano cartesiano es un parábola paralela al eje $y$. Esta se escribe/representa como : $f(x) = ax^{2} + bx + c$. \\ \\ \noindent Donde : \\
 
-\begin{tabular}{lcl} 
-Constante (reales) & : & $a \neq 0$, $b$ y $c$ \\ 
-Dominio & : & $D_{f} = \mathbb{R}$ \\ 
+\begin{tabular}{lcl}
+Constante (reales) & : & $a \neq 0$, $b$ y $c$ \\
+Dominio & : & $D_{f} = \mathbb{R}$ \\
 Rango & : & {\scriptsize Si $a > 0$, entonces se abre hacia arriba} \\
 \empty & \empty & {\scriptsize Si $a < 0$, entonces se abre hacia abajo.}  % $R_{f} = \{ -1, 0, 1\}$
 \end{tabular}
@@ -93,9 +162,10 @@ Rango & : & {\scriptsize Si $a > 0$, entonces se abre hacia arriba} \\
 \paragraph*{Función Polinomial} -- \\ \noindent
 Esta definida como : $f(x) = a_{n}\,x^{n} + a_{n - 1}\,x^{n - 1} + \ldots + a_{1}\,x + a_{0}$ \\ \\ \noindent Donde : \\
 
-\begin{tabular}{lcl} 
+\begin{tabular}{lcl}
 Coeficientes & : & $a_{n},\,a_{n - 1},\,\ldots,\,a_{1} \in \mathbb{R} \wedge a_{n} \neq 0$ \\
 Dominio & : & {\scriptsize Varían acorde al gráfico} \\ % $D_{f} = \mathbb{R}$
 Rango & : & {\scriptsize Varían acorde al gráfico} % $R_{f} = \{ -1, 0, 1\}$
 \end{tabular}
 \end{document}
+% \begin{}
