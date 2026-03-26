@@ -1,0 +1,318 @@
+\documentclass[12pt, a5paper]{article}
+
+\usepackage{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{enumerate}
+\usepackage{verbatim}
+% \usepackage{tikz}
+% \usetikzlibrary{babel}
+\usepackage{multicol}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Teoría Matricial},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+\section*{Matriz}
+Es un \textbf{ordenamiento de coeficientes técnicos} (elementos) que pueden ser números, funciones, vectores, etc. dispuestos en \textit{filas} y \textit{columnas}, que sirven para plantear un sistema homogéneo de ecuaciones lineales que verifican ciertas reglas y propiedades del álgebra líneal. \\ 
+
+\noindent Una matriz es una \textbf{disposición rectangular} de elementos distribuídos en filas y columnas. Los elementos en referencia, pueden ser números reales ($\mathbb{R}$), números complejos ($\mathbb{C}$), funciones o también matrices en condiciones especiales.
+
+\subsection*{Orden de una matriz}
+Una matriz $A$ tiene un orden según el número de elementos ordenados en $m$ filas y $n$ columnas. $A_{m \times n}$. Se dice que la matriz $A$ tiene orden $m$ por $n$. \\
+
+\noindent Utilizaremos los corchetes para representar una \textbf{matriz}. Si el arreglo tiene $m$ filas y $n$ columnas diremos que la matriz es de orden $m \times n$. \\
+
+\noindent {Ejemplo :} 
+\noindent {\footnotesize La siguiente es una matriz de orden $3 \times 4$}
+$$
+\begin{bmatrix}
+0 & -5 & 20 & 6 \\
+1 & \;6 & 10 & 7 \\
+3 &  \;7 & 1 & 2
+\end{bmatrix}_{3 \times 4}
+$$
+
+\noindent {\footnotesize Una matriz de orden $3 \times 1$}
+$$
+\begin{bmatrix}
+a \\
+x^2 \\
+y
+\end{bmatrix}_{3 \times 1}
+$$
+
+\noindent {\footnotesize O una matriz de $2 \times 2$}
+$$
+\begin{bmatrix}
+ 8 & 4 \\
+ -3 & -6
+\end{bmatrix}_{2 \times 2}
+$$
+
+\noindent {\footnotesize La siguiente es una matriz (vector) de $1 \times 3$}
+$$
+\begin{bmatrix}
+1 & 3 & -10
+\end{bmatrix}_{1 \times 3}
+$$
+
+En forma concisa, una matriz de orden $m \times n$, se denota con un letra mayúscula, y sus elementos con letras minúsculas.
+
+\subsection*{Elementos de una matriz}
+\noindent Los elementos de una matriz se simboliza en forma general {\Large $a_{ij}$}, donde $i$ son las \textit{filas} y $j$ son las \textit{columnas}. Los mismos tienen variación $i = 1, 2, 3, 4, \ldots , m$ y $j = 1, 2, 3, 4, \ldots, n$. \\
+
+\noindent Ejemplo:
+
+% \begin{minipage}[t]{0.5\textwidth}
+\begin{multicols}{2}
+$A = \begin{bmatrix}
+ 2 & 5 \\
+ 4 & 8
+\end{bmatrix}_{2 \times 2}$ \\ 
+% \end{minipage}
+
+%second column
+% \begin{minipage}[t]{0.5\textwidth}
+$B = \begin{bmatrix}
+4 & 2 & 3 \\
+5 & 3 & 2 \\
+2 & 4 & 6
+\end{bmatrix}_{3 \times 3}$
+% \end{minipage}
+\end{multicols}
+
+\subsection*{Notación general de una matriz}
+Tenemos elementos con ciertos sub-índices que nos indican la fila y columna donde se encuentra ubicado cada elemento, asimismo, nos indiquen cuantas filas y cuantas columnas tienen en total. \\
+
+\noindent Sea la matriz $A$ de $m$ filas y $n$ columnas cuyos elementos son de la forma $a_{ij}$ indicándonos que es un elemento de la fila y de la columna definida.
+
+$$
+A = \begin{pmatrix}
+a_{11} & a_{12} & a_{13} & \dots & a_{1n} \\
+a_{21} & a_{22} & a_{23} & \dots & a_{2n} \\
+a_{31} & a_{32} & a_{33} & \dots & a_{3n} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & a_{m3} & \dots & a_{mn} \\
+\end{pmatrix}_{m \times n}
+$$
+
+\noindent También es usual decir : {\large $A_{m \times n} = [a_{ij}]_{m \times n}$}; donde $i = 1, 2, 3, \ldots, m$ y $j = 1, 2, 3, \ldots, n$ siendo {\Large $a_{ij}$} es el elemento que se encuentra en la \textbf{i-ésima} fila y la \textbf{j-ésima} columna.
+
+\subsection*{Clasificación de matrices}
+\noindent Las matrices se clasifican en : 
+\begin{itemize}
+\item{matriz rectangular}
+\item{matriz cuadrada}
+\end{itemize}
+
+\subsubsection*{Matriz rectangular}
+\noindent Se dice que una matriz es \textbf{rectangular} cuando el número de filas es diferentes al número de columnas, es decir $m \neq n$. \\
+
+\noindent Ejemplo:
+
+\begin{multicols}{2}
+$C = \begin{bmatrix}
+2 & 2 & 3 \\
+4 & 1 & 2
+\end{bmatrix}_{2 \times 3}$ \\
+
+$D = \begin{bmatrix}
+3 & 2 \\
+2 & 5 \\
+1 & 2
+\end{bmatrix}_{3 \times 2}$
+\end{multicols}
+
+\subsubsection*{Vector}
+\noindent Es una matriz que tiene solamente una columna (\textit{vector columna}) o una matriz que tiene sólo una fila (\textit{vector fila}).
+\begin{itemize}
+\item{Si $i = 1$ y $j = 1, 2, \ldots, n$ entonces {\large $A_{1 \times n} = [a_{ij}]_{1 \times n}$} es la llamada \textbf{matriz fila} o \textbf{vector fila} / Horizontal.
+$$
+E = \begin{vmatrix}2 & 1 & 3\end{vmatrix}_{1 \times 3}
+$$
+}
+\item{Si $i = 1, 2, \ldots, n$ y $j = 1$ entonces {\large $A_{m \times 1} = [a_{ij}]_{m \times 1}$} es la llamada \textbf{matriz columna} o \textbf{vector columna} / Vertical
+$$
+F = \begin{pmatrix}
+3 \\
+2 \\
+\frac1{2}\\
+4 \end{pmatrix}_{4 \times 1}
+$$}
+\end{itemize}
+
+\subsubsection*{Matriz cuadrada}
+\noindent Se dice que una matriz es cuadrada, cuando el número de filas es igual al número de columnas; es decir $m = n$. \\
+
+\noindent Ejemplo :
+
+\begin{multicols}{2}
+$G = \begin{vmatrix}
+2 & 4 \\
+3 & 5
+\end{vmatrix}_{2 \times 2}$ \\
+
+$H = \begin{vmatrix} 4 & 2 & 3 \\  5 & 3 & 2 \\ 2 & 4 & 6 \end{vmatrix}_{3 \times 3}$
+\end{multicols}
+
+
+\subsubsection*{Clasificación de matriz cuadrada}
+La \textbf{matriz cuadrada} se puede clasificar de acuerdo a la utilidad que proporcione en la resolución de problemas o ecuaciones matemáticas. \\
+
+% \noindent Para este caso específico partimos del siguiente ejemplo: Una empresa de confecciones producen camisas, sacos y pantalones a base de telas de los siguientes colores: blanco, negro y azul. Los agentes de ventas pueden representarse en una tabla de insumos como el siguiente:
+
+% | Componentes |  | Productos|   |
+% | --- | --- | --- | --- |
+% | &nbsp; | Camisa | Saco | Pantalón |
+% | tela blanca | 6 m | 6 m | 4 m |
+% | tela negra | 12 m | 12 m | 10 m |
+% | tela azul | 10 m | 8 m | 8 m |
+
+\subsubsection*{Matriz del sistema ({\Large $A_s$})}
+\noindent Es aquella matriz cuadrada formada por los coeficientes técnicos de insumo-producto del problema real. \\
+
+\noindent Ejemplo:
+
+$$
+A_s = \begin{vmatrix}
+6 & 6 & 4 \\
+12 & 12 & 10 \\
+10 & 8 & 8
+\end{vmatrix}_{3 \times 3}
+$$
+
+\subsubsection*{Matriz transpuesta ({\Large ${A_s}^T$})}
+Es aquella matriz cuadrada que se forma mediante la transposición (intercambio) de los elementos de filas en columnas o columnas en filas de la matriz del sistema.
+
+\noindent Ejemplo:
+
+$$
+{A_s}^T = \begin{vmatrix} 6 & 12 & 10 \\
+6 & 12 & 8 \\
+4 & 10 & 8 \end{vmatrix}_{3 \times 3}
+$$
+
+\noindent Si {\large $A = [a_{ij}]_{m \times n}$}, es una matriz $m \times n$, entonces la \\ \texttt{TRANSPUESTA} de $A$, es la matriz {\large $A^t$ = $[b_{ij}]_{n \times m}$}, donde {\large $b_{ij} = a_{ji}$} para todo $i = 1, 2, 3, \ldots, n$ y $j = 1, 2, 3, \ldots, m$ \\
+
+\noindent Ejemplo :
+
+\begin{multicols}{2}
+Si $A = \begin{vmatrix} 8 & 1 & 4 \\ -3 & 3 & 5 \\ 0 & \sqrt{2} & -1 \\ -6 & 4 & 2 \end{vmatrix}_{4 \times 3}$ \\
+
+$A^t = \begin{vmatrix} 8 & -3 & 0 & -6 \\ 1 & 3 & \sqrt{2} & 4 \\ 4 & 5 & -1 & 2 \end{vmatrix}_{3 \times 4}$
+\end{multicols}
+
+\subsubsection*{Matriz adjunta ($Adj.\;{A_s}^T$)}
+Es una matriz cuadrada que se forma mediante los cofactores que se obtienen de la matriz transpuesta y dichos cofactores tienen signos  alternados de positivo a negativo tanto en filas y columnas, finalmente se aplica determinantes para cada uno de los cofactores.
+
+
+\subsubsection*{Cofactor}
+Los cofactores se forman por los elementos libres que quedan al elegir un elemento específico de la matriz cuadrada y eliminando (omitiendo) al mismo tiempo su fila y columna correspondiente. El número de cofactores es igual al número de elementos de la matriz cuadrada referencial. \\
+
+\noindent El cofactor se aplica a la matriz del sistema para calcular su determinante, como también a una matriz transpuesta para determinar su matriz adjunta.
+
+\subsubsection*{Determinante}
+\noindent El determinante es una función que aplicada a una matriz cuadrada que la transforma en un valor escalar o un número. \\
+\\ El determinante se calcula como la sumatoria algebraica del producto entre los elementos de la primera fila por sus cofactores correspondientes.
+
+\noindent Ejemplo :
+
+Sea $A = \begin{vmatrix} 1 & 6\\ 2 & 3\end{vmatrix}_{2 \times 2}$ \\
+la determinante de $A$ (se representa con $|A|$), se obtiene por: $|A| = 1 \cdot \begin{vmatrix} 3 \end{vmatrix} - 6 \cdot \begin{vmatrix} 2 \end{vmatrix}$
+
+$$
+|A_s| = 6 12 10 8 8 - 6
+$$
+
+\subsubsection*{Diagonales de una matriz cuadrada}
+\noindent Una matriz cuadrada tiene dos clases de diagonales.
+\begin{itemize}
+\item{\textbf{Diagonal Principal} -- Son aquellas diagonales orientadas del vértice superior izquierdo hacia el vértice inferior derecho, es decir, de $a_{11}$ a $a_{mn}$ y tienen signo positivo.}
+\item{\textbf{Diagonal Secundaria} -- Son aquellas diagonales orientadas del vértice superior derecho hacia el vértice inferior izquierdo , es decir, de $a_{1n}$ a $a_{m1}$ y tienen signo negativo.}
+\end{itemize}
+
+\subsubsection*{Matriz Inversa.}
+Es el cociente que se obtiene al dividir la matrix adjunta y el determinante de la matriz del sistema. Es una matriz
+
+\subsubsection*{Matriz unitaria o Identidad (I)}
+\noindent Es aquella matriz cuya diagonal principal son unidades (1). \\
+
+\noindent Ejemplo:
+$$
+I = \begin{vmatrix} 1 & 0 \\ 0 & 1\end{vmatrix}_{2 \times 2}
+$$
+
+
+
+\begin{comment}
+```
+np.empty((2,3))
+```
+
+## Igualdad de Matrices
+
+Dos matrices $A$ y $B$ son iguales, si y sólo si, son del mismo
+
+## Suma y resta de matrices
+Para sumar o restar dos o más matrices, la condición necesaria es que sean del mismo orden, tanto matrices rectangulares y cuadradas respectivamente.
+
+A = 1 2; 5 4
+
+4 8
+
+2 6
+
+4 2 3
+2 1 6
+5 7 2
+
+5 2 5
+6 10 4
+8 6 8
+
+1 2
+5 4
+
+4 8
+2 6
+
+5 10
+7 10
+
+
+## Multiplicación de matrices
+Para multiplicar dos o más matrices la condición necesaria será que el número de columnas del primer facto debe ser igual al número de filas del segundo factor.
+
+El procedimiento para obtener
+
+Ejemplo
+Sean las siguientes matrices
+As = [1 2 5 4 4 8 2 6
+
+2 3 4
+5 4 2
+4 2 5
+4 3 2]
+
+Multiplicar
+As Bs = 1 2 5 4
+
+### Cálculo de la matriz inversa por el método matriz adjunta
+
+Para calcular la matriz inversa, se debe identificar la matriz del sistema formados por los coeficientes técnicos de insumo-producto. Sólo las matrices cuadradas poseen la inversa.
+
+El procedimiento es el siguiente:
+PRIMERO
+Se tiene la matriz del sistema siguiente:
+Segundo
+Se determina la matriz compuesta AT. Esta matriz se obtiene cambiando los elementos de la fila en columnas y los elemenos de la columna en filas.
+
+tercero
+Se calcula la matriz adjunta At está matriz adjunta se forma mediante los cofactores del mismo orden de la matriz transpuesta en la siguiente forma:
+
+en una matriz transpuesta se elige el elemento de la primera fila y primera columna (a11), luego se anulan todos los elementos de la fila y columna que contengan dicho elemento.
+\end{comment}
+\end{document}
