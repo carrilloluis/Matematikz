@@ -1,0 +1,92 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+%\usetikzlibrary {arrows.meta} 
+%\usetikzlibrary{fit,positioning}
+\usepackage{multicol}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Razonamiento matemático},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+% Evaluación del aprendizaje
+\subsection*{Razonamiento matemático}
+\begin{itemize}
+\item{Analizar \iffalse y responde \fi que en el reloj análogo/analógico de la abuela son las 03:00 p.m. ¿Cuál es la medida del ángulo (interno) que describen las manecillas en ese instante?}
+\item{Estimar, nombrar y clasifícar la medida de cada uno de los siguientes ángulos. Luego medir y verificar la estimación.
+
+\begin{multicols}{2}
+{\scriptsize Figura a.}
+
+%\shorthandoff{"}
+\begin{tikzpicture}
+	\coordinate (A) at (-1.75, -3.1);
+	\coordinate (B) at (0, 0);
+	\coordinate (C) at (3.5, 0);
+	
+	\begin{scope}[-latex]
+	\draw (B) -- (C);
+	\draw (B) -- (A);
+	\end{scope}	
+	\draw pic[draw, angle radius=.35cm] {angle=A--B--C};
+\end{tikzpicture}
+
+
+{\scriptsize Figura b.}
+
+\begin{tikzpicture}
+	\coordinate (A) at (1.75, -3.1);
+	\coordinate (B) at (0, 0);
+	\coordinate (C) at (3.5, -.75);
+	
+	\begin{scope}[-latex]
+	\draw (B) -- (C);
+	\draw (B) -- (A);
+	\end{scope}	
+	\draw pic[draw, angle radius=.6cm] {angle=A--B--C};
+\end{tikzpicture}
+\end{multicols}
+}
+%\item{Rosa hace la siguiente afirmación.}
+\item{Si dos recta paralelas son cortadas simultáneamente por una recta transversal, donde se forman ocho ángulos.
+
+{\scriptsize Figura c.}
+
+\begin{tikzpicture}
+	\begin{scope}[latex-latex]
+	\draw (-2, 0) -- (4, 0);
+	\draw (-2, -1.5) -- (4, -1.5);
+	\draw (-1, 1.25) -- (3, -2.25);
+	\end{scope}
+	\draw (-1.2, 1.45) node{$A$};
+	\draw (3.2, -2.45) node{B};
+	\draw (-1.9, .275) node{$W$};
+	\draw (3.9, .275) node{$Z$};
+	\draw (-1.9, -1.175) node{$V$};
+	\draw (4, -1.175) node{$T$};
+	
+	\draw (.75, .275) node{$X$};
+	\draw (1.975, -1.85) node{$Y$};
+\end{tikzpicture}
+
+\begin{itemize}
+\item[$\circ$]{¿Encontrar/identificar parejas de ángulos congruentes en la figura anterior que son (y no) opuestos por el vértice? Explicar/usar un transportador.}
+
+\end{itemize}
+}
+\end{itemize}
+\end{document}
