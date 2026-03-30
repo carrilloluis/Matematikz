@@ -1,0 +1,48 @@
+\documentclass[12pt, a5paper]{article}
+
+\usepackage[left=1.3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{verbatim}
+\usepackage{mathpazo}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Raíces de una ecuación cuadrática},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+% Completar al CUADRADO
+\paragraph*{Encuentra las raíces de la ecuación cuadrática :} $$x^2 - 4x + 1 = y$$
+
+Las raíces son las intersecciones en $x$, donde la gráfica cruza el eje $x$. El valor de $y$ para cualquier punto en el eje $x$ es $0$, entonces sustituir $y$ por $0$ .
+$$
+x^2 - 4x + 1 = 0
+$$
+Reescribir la ecuación con el lado izquierdo de la forma $x^2 + bx$, para prepararla para completar el cuadrado.
+$$
+x^2 - 4x = -1
+$$
+Sumar $(\frac{b}{2})^2$ al lado izquierdo para completar el cuadrado, y también al lado derecho para mantener la ecuación válida (o la igualdad inicial)
+$$
+x^2 - 4x + \Big(\dfrac{b}{2}\Big)^2 = -1 + (\frac{b}{2})^2
+$$
+En el ejemplo, con b = -4, entonces $\Big(\dfrac{b}{2}\Big)^2 = \Big(\dfrac{-4}{2}\Big)^2 = 4$ :
+\begin{eqnarray*}
+x^2 - 4x + 4 &=& -1 + 4  \\
+x^2 - 4x + 4 &=& 3
+\end{eqnarray*}
+Reescribir el lado izquierdo como un \texttt{binomio cuadrado}.
+$$
+(x - 2)^2 = 3
+$$
+Sacar la raíz cuadrada de ambos lados. Necesitamos ambas raíces la positiva y la negativa, o perderemos una de las soluciones.
+$$
+x - 2 = \sqrt{3}\qquad\text{ó}\qquad x - 2 = - \sqrt{3}
+$$
+Resolver $x$. Estas son las coordenadas en $x$ de las raíces.
+\begin{eqnarray*}
+x_1 - 2 = \sqrt{3}\qquad&\wedge&\qquad x_2 - 2 = - \sqrt{3} \\
+x_1 = 2 + \sqrt{3}\qquad&\wedge&\qquad x_2 = 2 - \sqrt{3} \\
+\end{eqnarray*}
+\end{document}
