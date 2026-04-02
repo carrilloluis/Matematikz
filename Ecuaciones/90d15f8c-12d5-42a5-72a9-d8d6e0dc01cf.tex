@@ -1,0 +1,46 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Sistemas de ecuaciones},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\subsection*{Sistemas de ecuaciones}
+\begin{itemize}
+\item{Resolver por sustitución : $\left\{\begin{matrix} 5x + 2y &=& 1 \\ -3x + 3y &=& 5\end{matrix}\right.$
+\begin{eqnarray*}
+\empty &=& \left\{\begin{matrix} 5x + 2y = 1 \\ -3x + 3y = 5\end{matrix}\right. \\
+5x + 2y &=& 1 \qquad \text{{\scriptsize En la ecuación 1}}\\
+5x + 2y - 2y &=& 1 - 2y\\
+\dfrac1{5} \cdot 5x &=& \dfrac1{5} \cdot (1 - 2y) \\
+x &=& \dfrac1{5}  - \dfrac{2y}{5} \\
+-3 \cdot \Big( \dfrac1{5}  - \dfrac{2y}{5}\Big) + 3y &=& 5 \qquad \text{{\scriptsize Sustituir en la ecuación 2}} \\
+-\dfrac{3}{5} + \dfrac{6y}{5} + \dfrac{15y}{5} &=& 5 \\
+\dfrac{21y}{5} &=& \dfrac{25}{5} + \dfrac{3}{5} \\
+21y &=& 28 \implies y = \dfrac{28}{21} = \dfrac{4}{3} \\
+\therefore\quad x &=& -\dfrac1{3}
+\end{eqnarray*}
+}
+\item{Resolver por reducción : $\left\{\begin{matrix} 2x + y &=& 6 \\ 4x + 3y &=& 14\end{matrix}\right.$}
+\item{Resolver por igualación : $\left\{\begin{matrix} 5x - 2y &=& 2 \\ x + 2y &=& 2\end{matrix}\right.$}
+\item{Resolver por reducción : $\left\{\begin{matrix} 5x - y &=& 3 \\ -2x + 4y &=& -12\end{matrix}\right.$}
+\item{Resolver por sustitución : $\left\{\begin{matrix} 3x + 5y &=& 15 \\ 2x - 3y &=& -9\end{matrix}\right.$}
+\item{Resolver por reducción : $\left\{\begin{matrix} 4x + 6y &=& 2 \\ 6x + 5y &=& 1\end{matrix}\right.$}
+\item{Resolver por sustitución : $\left\{\begin{matrix} -2x + 3y &=& 14 \\ 3x - y &=& -14\end{matrix}\right.$}
+\item{Resolver por igualación : $\left\{\begin{matrix} 2x + 3y &=& 2 \\ -6x + 12y &=& 1\end{matrix}\right.$}
+\item{Resolver por igualación : $\left\{\begin{matrix} 5x + 2y &=& 11 \\ 2x - 3y &=& 12\end{matrix}\right.$}
+\item{Resolver por reducción : $\left\{\begin{matrix} -2x + 4y &=& 7 \\ 3x - 5y &=& 4\end{matrix}\right.$}
+\end{itemize}
+\end{document}
