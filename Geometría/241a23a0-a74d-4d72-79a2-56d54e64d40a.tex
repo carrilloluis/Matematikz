@@ -1,0 +1,68 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish]{babel}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+%\usetikzlibrary {arrows.meta} 
+%\usetikzlibrary{fit,positioning}
+\usepackage{multicol}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Razonamiento matemático},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\paragraph*{Geometría - triángulos} -- \\ \\
+\noindent Un triángulo con los siguientes vértices : $A(0, 0)$, $B(3, 4)$ y $C(6, 0)$. Determinar el tipo de triángulo $\triangle ABC$.
+
+\begin{comment}
+A triangle has the following vertices : $A(0, 0)$, $B(3, 4)$ and C(6, 0). What type of triangle is $\triangle ABC$
+\end{comment}
+
+\begin{tikzpicture}
+	\coordinate (A) at (0, 0);
+	\coordinate (B) at (3, 4);
+	\coordinate (C) at (6, 0);
+	
+	\draw (A) -- (B) -- (C) -- cycle;
+
+	\draw (-.35, -.15) node{$A$};
+	\draw (3.05, 4.3) node{$B$};
+	\draw (6.25, -.1) node{$C$};
+
+	\draw pic[draw, angle radius=.35cm] {angle=A--B--C};
+	\draw pic[draw, angle radius=.5cm] {angle=C--A--B};
+	\draw pic[draw, angle radius=.75cm] {angle=B--C--A};
+\end{tikzpicture}
+\begin{eqnarray*}
+\text{Sea}\quad d &=& \sqrt{\,(x_{2} - x_{1})^{\,2} + (y_{2} - y_{1})^{\,2}\,} \\
+d_{A, B} &=& \sqrt{ (3 - 0)^{\,2} + (4 - 0)^{\,2}\,} \\
+d_{A, B} &=& \sqrt{ 3^{\,2} + 4^{\,2}\,} \\
+d_{A, B} &=& \sqrt{\,9 + 16\,} = \sqrt{\,25\,}\\
+d_{A, B} &=& \pm\, 5
+\end{eqnarray*}
+\begin{eqnarray*}
+d_{B, C} &=& \sqrt{ (6 - 3)^{\,2} + (0 - 4)^{\,2}\,} \\
+d_{B, C} &=& \sqrt{ (3)^{\,2} + (-4)^{\,2}\,} \\
+d_{B, C} &=& \sqrt{\,9 + 16\,} = \sqrt{\,25\,} \\
+d_{B, C} &=& \pm\, 5 
+\end{eqnarray*}
+\begin{eqnarray*}
+d_{A, C} &=& \sqrt{ (6 - 0)^{\,2} + (0 - 0)^{\,2}\,} \\
+d_{A, C} &=& \sqrt{ (6)^{\,2} + (0)^{\,2}\,} \\
+d_{A, C} &=& \sqrt{\,36 + 0\,} = \sqrt{\,36\,} \\
+d_{A, C} &=& \pm\, 6 
+\end{eqnarray*}
+$\therefore \quad d_{A,B} = d_{B,C} \neq d_{A,C} \implies \triangle ABC\quad \text{es Isósceles}$
+\end{document}
