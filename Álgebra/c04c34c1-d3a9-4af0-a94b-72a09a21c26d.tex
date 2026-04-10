@@ -1,0 +1,56 @@
+\documentclass[12pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1.2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath} % \usepackage{amsmath, amssymb}
+\usepackage{enumerate}
+\usepackage{verbatim}
+\usepackage{tasks}
+\usepackage{graphicx}
+\usepackage{nicefrac, xfrac}
+\usepackage{mathpazo}
+% \usepackage{tikz}
+% \usetikzlibrary{babel}
+% \usepackage{hyperref}
+
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+\subsubsection*{Álgebra}
+
+\begin{itemize}
+\item{Simplificar :
+$$
+= \dfrac{ ( \dfrac{a^3 - b^3}{a - b} ) (\dfrac{a^3 + b^3}{a + b}) }{a^4 + a^2b^2 + b^4}
+$$
+\begin{tasks}(5)
+\task{$1$}\task{$a + b$}\task{$2a$}\task{$\dfrac{a}{b}$}\task{$a^{2}b^{2}$}
+\end{tasks}
+
+\begin{eqnarray*}
+= \dfrac{\Big[\dfrac{a^3 - b^3}{a - b}\Big] (\dfrac{a^3 + b^3}{a + b}) }{a^4 + a^2b^2 + b^4} &=& \dfrac{\Big(\dfrac{a^{6} - b^{6}}{a^{2} - b^{2}}\Big)}{a^4 + a^2b^2 + b^4} \\[11pt]
+= \dfrac{\Big(\dfrac{a^{6} - b^{6}}{a^{2} - b^{2}}\Big)}{\dfrac{(a^4 + a^2b^2 + b^4)(a^{2} - b^{2})}{(a^{2} - b^{2})}} &=& \dfrac{\dfrac{a^{6} - b^{6}}{a^{2} - b^{2}}}{\dfrac{(a^{2})^{3} - (b^{2})^{3}}{a^{2} - b^{2}}} \\[11pt]
+= \dfrac{\;\;\dfrac{a^{6} - b^{6}}{a^{2} - b^{2}}\;\;}{\dfrac{a^{6} - b^{6}}{a^{2} - b^{2}}} &=& 1 
+\end{eqnarray*}}
+\item{Simplificar : \qquad$= \dfrac{\sqrt[4]{a^{3}b^{5}\;} \cdot \sqrt[5]{ab^{2}\;}}{\sqrt[20]{a^{19}\;}}$ % \quad siendo $\sqrt{\dfrac{a^2}{m^3}} + \sqrt{\dfrac{m^3}{a^2}} = 7$
+\begin{tasks}(5)
+\task{$1$}\task{$b$}\task{$b^{2}$}
+\end{tasks}
+\begin{eqnarray*}
+= \dfrac{\sqrt[4]{a^{3}b^{5}\;} \cdot \sqrt[5]{ab^{2}\;}}{\sqrt[20]{a^{19}\;}} &=& \scalebox{1.25}{$\dfrac{(a^{3}b^{5})^{\sfrac{1}{4}} \cdot (ab^{2})^{\sfrac{1}{5}}}{(a^{19})^{\sfrac{1}{20}}}$} \\[11pt]
+= \scalebox{1.25}{$\dfrac{(a^{\,\sfrac{3}{4}}\,b^{\,\sfrac{5}{4}})\cdot(a^{\,\sfrac{1}{\,5}}\,b^{\,\sfrac{2}{5}})}{a^{\,\sfrac{19}{20}}}$} &=& \scalebox{1.25}{$\dfrac{a^{\,\frac{3}{4} + \frac{1}{5}}\,b^{\,\frac{5}{4} + \frac{2}{5}}}{a^{\,\sfrac{19}{20}}}$} \\[10pt]
+= \dfrac{a^{\,\sfrac{19}{20}} \cdot b^{\,\sfrac{33}{20}}}{a^{\sfrac{19}{20}}} &=& b^{\,\sfrac{33}{20}} 
+\end{eqnarray*}
+}
+\item{Calcular : \quad$= \sqrt[8]{\dfrac{a^2}{m^3}} - \sqrt[8]{\dfrac{m^3}{a^2}}$
+\begin{eqnarray*}
+= \sqrt[8]{\dfrac{a^2}{m^3}} - \sqrt[8]{\dfrac{m^3}{a^2}} &=& \Big(\dfrac{a^2}{m^3}\Big)^{\sfrac{1}{8}} - \Big(\dfrac{m^3}{a^2}\Big)^{\sfrac{1}{8}} \\[11pt]
+= \dfrac{a^{\,\sfrac{2}{8}}}{m^{\,\sfrac{3}{8}}} - \dfrac{m^{\sfrac{3}{8}}}{a^{\sfrac{2}{8}}} &=& \dfrac{(a^{\,\sfrac{2}{8}})^{2} - (m^{\,\sfrac{3}{8}})^{2}}{ a^{\,\sfrac{2}{8}}\,m^{\,\sfrac{3}{8}} } \\[10pt]
+= \dfrac{a^{\sfrac{4}{8}} - m^{\sfrac{6}{8}}} { (a^{2}\,m^{3})^{\sfrac{1}{8}}} &=& \dfrac{(a^{\sfrac{4}{8}} - m^{\sfrac{6}{8}}) \cdot (a^{6}\,m^{5})^{\sfrac{1}{8}}}{(a^{2}\,m^{3})^{\sfrac{1}{8}} \cdot (a^{6}\,m^{5})^{\sfrac{1}{8}}} \\[10pt]
+= \dfrac{a^{ \sfrac{4}{8} }\cdot (a^{ \sfrac{6}{8} }\,m^{ \sfrac{5}{8} }) - m^{ \sfrac{6}{8} }\cdot (a^{ \sfrac{6}{8} }\,m^{ \sfrac{5}{8} })}{a^{\frac{2}{8} + \frac{6}{8}}\,m^{\frac{3}{8} + \frac{5}{8}}} &=& \dfrac{ a^{\,\sfrac{10}{8} } \,m^{\,\sfrac{5}{8} } - a^{\,\sfrac{6}{8} } \,m^{\,\sfrac{11}{8} } }{am} \\[10pt]
+= \dfrac{\sqrt[8]{(a^{2}m)^{5}\,} - \sqrt[8]{a^{6}m^{11}\,}}{am}
+\end{eqnarray*}}
+\end{itemize}
+\end{document}
