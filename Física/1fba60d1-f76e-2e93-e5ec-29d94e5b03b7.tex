@@ -2,15 +2,20 @@
 
 \usepackage[margin=1.2cm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish,es-noshorthands]{babel}
 \usepackage{amssymb, amsmath, amsbsy}
 \usepackage{verbatim}
 \usepackage{mathpazo}
 \usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+
 \usepackage[pdftex]{hyperref}
 \hypersetup{ pdftitle = {Ejercicios en vectores, geometría},pdfauthor = {Luis Carrillo Gutiérrez} }
 
 \renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
 
 \begin{document}
 \paragraph*{Vectores -- Ejercicios}
@@ -18,10 +23,10 @@
 \begin{itemize}
 \item{Determinar el valor del parámetro ``\scalebox{1.1}{$\,k\,$}'' para que los vectores :
 $$
-\vec{x} = k\vec{u} - 2\vec{v} + 3\vec{w}
+\vec{x} = k\,\vec{u} - 2\,\vec{v} + 3\,\vec{w}
 $$
 $$
-\vec{y} = - \vec{u} + k\vec{v} + \vec{w}
+\vec{y} = - \vec{u} + k\,\vec{v} + \vec{w}
 $$
 sean: ortogonales ($\vec{x}\perp\vec{y}$),\qquad paralelos ($\vec{x}\parallel\vec{y}$).
 }
@@ -36,6 +41,42 @@ sean: ortogonales ($\vec{x}\perp\vec{y}$),\qquad paralelos ($\vec{x}\parallel\ve
 \end{itemize}
 
 % Comparing two vectors by Glenn Research Center.
-\paragraph*{Comparando dos vectores}
+\paragraph*{Comparar vectores} -- \\
 
+Un vector tiene {\tt magnitud} y {\tt dirección}.
+% vector quantity ???
+\begin{itemize}
+\item{Si un vector $\overrightarrow{A}$ y un vector $\overrightarrow{B}$, tienen la misma dirección pero con diferentes magnitudes, entonces $\overrightarrow{A} \neq \overrightarrow{B}$.
+
+\begin{tikzpicture}
+	\begin{scope}[-latex]
+	\draw (0, 0) -- (1, 3);
+	\draw (1, 0) -- (1.5, 1.4);
+	\end{scope}
+	\draw (.1, 1.45) node{$\vec{A}$};
+	\draw (1.575, .75) node{$\vec{B}$};
+\end{tikzpicture}}
+
+\item{Si un vector $\overrightarrow{A}$ y un vector $\overrightarrow{B}$, tienen la misma magnitud pero con diferente dirección, entonces $\overrightarrow{A} \neq \overrightarrow{B}$.
+
+\begin{tikzpicture}
+	\begin{scope}[-latex]
+	\draw (0, 0) -- (1, 3);
+	\draw (1, 0) -- (2.5, 1.4);
+	\end{scope}
+	\draw (.1, 1.45) node{$\vec{A}$};
+	\draw (2.1, .5) node{$\vec{B}$};
+\end{tikzpicture}}
+
+\item{Si un vector $\overrightarrow{A}$ y un vector $\overrightarrow{B}$, tienen la misma dirección y la misma magnitud, entonces $\overrightarrow{A} = \overrightarrow{B}$.
+
+\begin{tikzpicture}
+	\begin{scope}[-latex]
+	\draw (0, 0) -- (1, 3);
+	\draw (1, 0) -- (2, 3);
+	\end{scope}
+	\draw (.1, 1.45) node{$\vec{A}$};
+	\draw (1.76, 1.45) node{$\vec{B}$};
+\end{tikzpicture}}
+\end{itemize}
 \end{document}
