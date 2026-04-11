@@ -1,7 +1,44 @@
-Calcular, aplicando la definición de los siguientes logaritmos :
+\documentclass[12pt]{scrbook}
 
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage[spanish]{babel}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Logaritmos - ejercicios básicos},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\begin{document}
+\paragraph*{Logaritmos} -- 
+$$
+\log_{\,a} N = c \qquad\iff\qquad a^{\,c} = N
+$$
+
+\noindent Calcular los siguientes logaritmos :
+% Calcular, aplicando la definición de los siguientes logaritmos :
 \begin{itemize}
-\item{$\log_{\,3} 27 = x$}
-\item{$\log_{\,x} 32 = 5$}
-\item{$\log_{\,3} x = 3$}
+\item{$\log_{\,3} 27 = x$
+\begin{comment}
+Identificamos la base a = 3, número N = 27 y el logaritmo c = x, para aplicar la fórmula de la definición de logaritmo.
+\end{comment}
+% Resolvemos la ecuación exponencial que nos queda. Cuando tenemos las mismas bases, entonces igualamos los exponentes.
+\begin{eqnarray*}
+\log_{\,3} 27 = x &\implies& 3^{\,x} = 27 \\
+3^{\,x} = 3^{\,3} &\to& x = 3 
+\end{eqnarray*}
+}
+\item{$\log_{\,x} 32 = 5$
+% Identificamos a = x, N = 32, logaritmo c = 5
+\begin{eqnarray*}
+\log_{\,x} 32 = 5 &\implies& x^{\,5} = 32 \\
+x^{\,5} = 2^{\,5} &\to& x = 2
+\end{eqnarray*}
+}
+\item{$\log_{\,3} x = 3$
+% Identificamos a = 3, N = x, logaritmo c = 3
+\begin{eqnarray*}
+\log_{\,3} x = 3 &\implies& 3^{\,3} = x \\
+x = 3^{\,3} &\to& x = 27
+\end{eqnarray*}
+}
 \end{itemize}
+
+\end{document}
