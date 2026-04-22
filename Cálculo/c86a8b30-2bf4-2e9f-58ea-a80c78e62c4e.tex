@@ -1,0 +1,68 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb, amsbsy}   
+\usepackage{verbatim}
+\usepackage{mathpazo}
+\usepackage[pdftex]{hyperref}
+\hypersetup{ pdftitle = {Integrales básicas},pdfauthor = {Luis Carrillo Gutiérrez} }
+
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\mathindent}{0pt}
+
+\begin{document}
+\subsubsection*{Integrales básicas}
+\[ \int dx = 1 \]
+
+$$
+\int x\;dx = x
+$$
+
+$$
+\int ax\;dx = ax
+$$
+
+\paragraph*{Integración por partes}
+$$
+\int u\;dv = uv - \int v\;du
+$$
+
+$$
+\int f(ax)\;dx = \dfrac1{a} \int f(u)\;du
+$$
+
+$$
+\int u^{n}\;du = \dfrac1{n + 1} \cdot u^{n + 1}\qquad n \neq -1
+$$
+
+$$
+\int (u \pm v \pm w)\;dx = \int u\;dx \pm \int v\;dx \pm \int w\;dx
+$$
+
+$$
+\int \dfrac1{a}\;da = \int \dfrac{da}{a} = \ln |a|
+$$
+
+$$
+\int e^{x}\;dx = e^{x}
+$$
+
+$$
+\int a^{x}\;dx = \dfrac{a^{x}}{\ln\;a}\qquad a > 0\,,\;a \neq 1
+$$
+
+$$
+\int \ln\,x\;dx = x \cdot \ln\,x - x
+$$
+
+$$
+\int x^{m}\ln\,x\;dx = \dfrac{x^{m} + 1}{m + 1} \cdot (\ln\;x - \dfrac1{m + 1})\qquad m \neq -1
+$$
+
+$$
+\int \dfrac{\ln\,x}{x}\;dx = \dfrac1{2}\ln^{2}\,x
+$$
+\end{document}
