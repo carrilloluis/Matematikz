@@ -1,0 +1,64 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=0.9cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Vectores, Producto punto, Norma de un vector},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\subsection*{Multiplicación de vector por un escalar}
+\noindent Sea el vector $\vec{A} = (a_1,\,a_2) \in \mathbb{R}^2$ 
+y sea $s \in \mathbb{R}$, se tiene : \newline 
+\begin{eqnarray*}
+s \cdot \vec{A} &=& s \cdot (a_1,\;a_2) \\
+s\vec{A} &=&  (s \cdot a_1,\; s \cdot a_2) \in \mathbb{R}^2
+\end{eqnarray*}
+
+% Producto punto
+\subsection*{Producto interior o producto escalar de un vector}
+Dados los vectores $\vec{A} = (a_1,\;a_2)$ y $\vec{B} = (b_1,\;b_2) \in \mathbb{R}^2$, el producto interior o escalar de $\vec{A}$ con $\vec{B}$, es el número real $\vec{A}\cdot\vec{B}$, definido por:  
+
+\begin{eqnarray*}
+\vec{A} \cdot \vec{B} &=& (a_{1},\;a_{2}) \cdot (b_{1},\;b_{2}) \\ 
+\empty &=& a_{1}b_{1} + a_{2}b_{2}\in \mathbb{R}
+\end{eqnarray*}
+
+\paragraph*{Propiedades} : \quad$\forall\;\vec{A},\,\vec{B} \in \mathbb{R}^{2}$ y $k \in \mathbb{R}$
+\begin{enumerate}[i.]
+\item{$\vec{A} \cdot \vec{B} \in \mathbb{R}$}
+\item{$\vec{A} \cdot \vec{B} = \vec{B} \cdot \vec{A}$}
+\item{$(k\,\vec{A}) \cdot \vec{B} = \vec{A} \cdot (k\,\vec{B}) = k\,(\vec{A} \cdot \vec{B})$}
+\item{$\vec{A} \cdot (\vec{B} + \vec{C}) = \vec{A} \cdot \vec{B} + \vec{A} \cdot \vec{C}$}
+\item{$\vec{A} \cdot \vec{A} \ge 0$, si $\vec{A} = (a_{1},\,a_{2}) \implies \vec{A}\cdot \vec{A} = {a_{1}}^{2} + {a_{2}}^{2} > 0$}
+\end{enumerate}
+
+\subsection*{Norma o longitud de un vector}
+Sea $\vec{A} \in \mathbb{R}$, la norma o longitud del vector $\vec{A}$, es un número real positivo $[|\,\vec{A}\,|]$, definido por :  
+\[
+\Big{||} \vec{A} || = \sqrt{\vec{A} \cdot \vec{A}\,}, \quad\text{si}\quad\vec{A} = (a_{1},\,a_{2}) \implies || \vec{A} || = \sqrt{{a_{1}}^{2} + {a_{2}}^{2}\,}
+\]
+\paragraph*{Propieades} : \quad$\forall\;\vec{A} \in \mathbb{R}^{2}$ y $k \in \mathbb{R}$ 
+%Ak AA
+% \subsubsection*{Propiedades}
+\begin{enumerate}[i.]
+\item{$||\vec{A}|| \in \mathbb{R}_{0}^{+}$
+\begin{itemize}
+\item{$||\vec{A}|| \ge 0$}
+\item{$||\vec{A}|| = 0 \iff \vec{A} = \vec{0}$}
+\end{itemize}
+}
+\item{$||\vec{A}||^{\,2} = \vec{A} \cdot \vec{A}$}
+\item{$||\vec{A}|| = ||- \vec{A}||$}
+\item{$||k\,\vec{A}|| = |k|\,||\,\vec{A}\,||$}
+\item{$||\vec{A} + \vec{B}\,|| \le ||\vec{A}|| + ||\vec{B}||$\qquad Desigualdad triangular}
+\item{$||\vec{A} \cdot \vec{B}\,|| \le ||\vec{A}|| \cdot ||\vec{B}||$\qquad Desigualdad de Cauchy-Schwarz}
+\end{enumerate}
+
+\end{document}
