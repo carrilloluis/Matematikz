@@ -1,0 +1,45 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Repaso en Aritmética},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\subsubsection*{Cálculo de los divisores de un número natural ($\mathbb{N}$)}
+
+\noindent Vamos a desarrollar un método para calcular los divisores de un número, por ejemplo de $72$. Primero se descompone el número $72$ en factores primos.
+
+\begin{center}
+\begin{tabular}{l|r}
+72 & 2 \\
+36 & 2 \\
+18 & 2 \\
+9 & 3 \\
+3 & 3 \\
+1 
+\end{tabular}
+\end{center}
+
+$$72 = 2^{\,3} \cdot 3^{\,2}$$
+
+Para conocer el número de divisores de $72$, se multiplican los {\tt exponentes} de los factores primos de su descomposición factorial, \emph{aumentados en una unidad}. 
+
+$$
+(3 + 1) \cdot (2 + 1) = 4 \cdot 3 = 12
+$$
+
+El número $72$ tendrá $12$ divisores.
+
+% A continuación se verá cuáles son esos divisores.
+\end{document}
