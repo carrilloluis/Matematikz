@@ -1,0 +1,39 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{scrbook}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={ecuaciones, ecuaciones exponenciales},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+
+\begin{document}
+%%% Ecuaciones exponenciales
+Resolver : \qquad$8^{\,x - 1} - 2^{\,3x - 2} = -8$ 
+
+\begin{eqnarray*}
+8^{\,x - 1} - 2^{\,3x - 2} &=& -8 \\
+8^{\,x - 1} - 2^{\,3x - 2} + 8 &=& 0 \\
+(2^{\,3})^{\,x - 1} - \dfrac{2^{\,3x}}{2^{\,2}} + (2^{\,3}) &=& 0 \\
+\dfrac{(2^{\,3})^{\,x}}{2^{\,3}} - \dfrac{2 \cdot (2^{\,3})^ {\,x}}{2 \cdot 2^{\,2}} + (2^{\,3}) &=& 0 \\
+\dfrac{(2^{\,3})^{\,x}}{2^{\,3}} - \dfrac{2 \cdot (2^{\,3})^ {\,x}}{2^{\,3}} + (2^{\,3}) &=& 0 \qquad \scriptsize{\text{reemplazamos}} \quad u = 2^{\,3} \\
+\dfrac{u^{\,x}}{u} - \dfrac{2 \cdot u^ {\,x}}{u} + u &=& 0 \\
+- \dfrac{u^ {\,x}}{u} &=& - u \\
+u^ {\,x} &=& u^{\,2} \\
+\therefore x &=& 2 \\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+8^{\,x - 1} - 2^{\,3x - 2} &=& -8 \qquad \text{\scriptsize Para}\quad x = 2 \\
+8^{\,2 - 1} - 2^{\,3(2) - 2} &=& -8 \\
+8^{\,1} - 2^{\,6 - 2} &=& -8 \\
+8 - 2^{\,4} &=& -8 \\
+8 - 16 &=& -8 \\
+- 8 &=& -8
+\end{eqnarray*}
+\end{document}
