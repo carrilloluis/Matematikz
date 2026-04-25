@@ -1,0 +1,41 @@
+\documentclass[10pt, a5paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle = {Derivada de un cociente},pdfauthor = {Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+Sea : \qquad\qquad$f(x) = \dfrac{(x + 4)^2}{x + 3}$\qquad Hallar : \qquad$f'(x)$ \\ \\
+
+\noindent{\scriptsize Solución} \\
+Considerando que : $f(x) = \dfrac{u}{v} \implies f'(x) = \dfrac{u'v - uv'}{v^2}$ \\ \\
+
+Por tanto en : \qquad$f(x) = \dfrac{(x + 4)^2}{x + 3}$
+\begin{eqnarray*}
+u & = & (x + 4)^2 \\
+u' & = & 2 (x + 4)(1) \\
+v & = & x + 3 \\
+v' & = & 1
+\end{eqnarray*}
+
+\begin{eqnarray*}
+f'(x) &=& \dfrac{2(x + 4)(x + 3) - (x+4)^2 (1)}{(x+3)^2} \\
+f'(x) &=& \dfrac{(x + 4)[2(x + 3) - (x + 4)]}{(x + 3)^2} \\
+f'(x) &=& \dfrac{(x + 4)(2x + 6 - x - 4)}{(x + 3)^2} \\
+f'(x) &=& \dfrac{(x + 4)(x + 2)}{(x +3)^2} = \dfrac{x^{2} + 6x + 8}{x^{2} + 6x + 9}
+\end{eqnarray*}
+
+{\scriptsize Otra posible solución}
+\begin{eqnarray*}
+f'(x) &=& \dfrac{2(x + 4)(x + 3) - (x+4)^2 (1)}{(x+3)^{2}} \\
+f'(x) &=& \dfrac{2(x + 4)(x + 3)}{(x+3)^{2}} - \dfrac{(x+4)^{2}}{(x+3)^{2}} \\
+f'(x) &=& \dfrac{2x + 8}{(x+3)} - \dfrac{(x+4)^{2}}{(x+3)^{2}} \\
+f'(x) &=& \dfrac{2x + 8}{(x+3)} - \Bigg[\dfrac{(x+4)}{(x+3)}\Bigg]^{2} 
+\end{eqnarray*}
+\end{document}
