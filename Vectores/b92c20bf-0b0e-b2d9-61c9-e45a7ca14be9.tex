@@ -1,30 +1,40 @@
-\documentclass[11pt, twocolumn, landscape, a4paper]{scrbook}
-
-\usepackage[margin=1cm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{amssymb, amsmath, amsbsy}
-\usepackage[pdftex]{hyperref}
-\hypersetup{pdftitle={vectores, geometría analítica},pdfauthor={Luis Carrillo Gutiérrez}}
-
-\fontfamily{cmss}\selectfont
-\renewcommand{\familydefault}{\sfdefault}
-\pagestyle{empty}
-
-
-\begin{document}
 %%% Geometría analítica [Vectores]
-Dado \quad$\overrightarrow{g\,} = (3,\,1,\,-1)$\quad y \quad$\overrightarrow{b\,} = (2,\,3,\,4)$
+%%% Luis Carrillo Gutiérrez, Abr/2026
+Dado \quad$\overrightarrow{a\,} = (3,\,1,\,-1)$\quad y \quad$\overrightarrow{b\,} = (2,\,3,\,4)$
 \begin{itemize}
-\item{Calcular los módulos de $\overrightarrow{g\,} \cdot \overrightarrow{b\,}$\qquad ({\scriptsize producto punto})
+\item{Calcular los módulos de $\overrightarrow{a\,}$\;\;y de\;\;$\overrightarrow{b\,}$\qquad ó \qquad$\lvert\mid\vec{a}\mid\rvert$\;\;y\;\;$\lvert\mid\vec{b}\mid\rvert$
+
 \begin{eqnarray*}
-\vec{g} \cdot \vec{b} &=& (3,\,1,\,-1) \cdot (2,\,3,\,4) \\
-\vec{g} \cdot \vec{b} &=& 3 \cdot2 \quad+\quad 1 \cdot 3 \quad+\quad (-1) \cdot 4 \\
-\vec{g} \cdot \vec{b} &=& 6 \;+\; 3 \;-\; 4 \\
+\vec{a} &=& (3,\,1,\,-1) \\
+\lvert\mid\vec{a}\mid\rvert &=& \sqrt{(3)^{2} + (1)^{2} + (-1)^{2} \,} \\
+||\;{\vec{a}}\;|| &=& \sqrt{9 + 1 + 1\;} = \framebox{$\sqrt{11\,}$}
 \end{eqnarray*}
-} 
-%Hallar el producto vectorial de A y B
-%Hallar el vector unitario ortogonal a A y B
-%Determinar el área del paralelogramo que tiene por lados los vectores A y B
+\begin{eqnarray*}
+\vec{b} &=& (2,\,3,\,4) \\
+||\;{\vec{b}}\;|| &=& \sqrt{(2)^{2} + (3)^{2} + (4)^{2} \,} \\
+||\;{\vec{b}}\;|| &=& \sqrt{4 + 9 + 16\;} = \framebox{$\sqrt{29\,}$}
+\end{eqnarray*}
+}
+\item{Hallar el producto vectorial entre $\overrightarrow{a\,}$\;\;y\;\;$\overrightarrow{b\,}$
+\begin{eqnarray*}
+\vec{a} \times \vec{b} &=& \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ 3 & 1 & -1 \\ 2 & 3 & 4 \end{vmatrix} \\
+\vec{a} \times \vec{b} &=& +\,\vec{i}\;\;\begin{vmatrix} 1 & -1 \\ 3 & 4 \end{vmatrix} - \vec{j}\;\;\begin{vmatrix} 3 & -1 \\ 2 & 4 \end{vmatrix} + \vec{z}\;\;\begin{vmatrix} 3 & 1 \\ 2 & 3 \end{vmatrix} \\
+\vec{a} \times \vec{b} &=& 7\,\vec{i} - 14\,\vec{j} + 7\,\vec{k} \\
+\vec{a} \times \vec{b} &=& 7 \cdot (1,\,-2,\,1)
+\end{eqnarray*}
+}
+\item{Hallar el vector unitario ortogonal entre $\overrightarrow{a\,}$\;\;y\;\;$\overrightarrow{b\,}$\quad ó\quad$\vec{u}^{\,\perp} = \dfrac{\vec{a} \times \vec{b}}{||\,\vec{a} \times \vec{b}\,||}$
+\begin{eqnarray*}
+\vec{a} \times \vec{b} &=& (1,\,-2,\,1) \\
+||\,\vec{a} \times \vec{b}\,|| &=& \sqrt{(1)^{\,2} + (-2)^{\,2} + (1)^{\,2}\,} \\
+||\,\vec{a} \times \vec{b}\,|| &=& \sqrt{1 + 4 + 1\,} = \sqrt{6\,} \\
+\vec{u}^{\,\perp} &=& \dfrac{\vec{a} \times \vec{b}}{||\,\vec{a} \times \vec{b}\,||} = \dfrac{(1,\,-2,\,1)}{\sqrt{6}} \\
+ \vec{u}^{\,\perp} &=& \Big(\dfrac{1}{\sqrt{6}}, \,\dfrac{-2}{\sqrt{6}}, \,\dfrac{1}{\sqrt{6}}\Big)
+\end{eqnarray*}
+}
+\item{Determinar el área del paralelogramo que tiene por lados los vectores $\overrightarrow{a\,}$\;\;y\;\;$\overrightarrow{b\,}$
+\begin{eqnarray*}
+\mid\vec{a} \times \vec{b}\mid &=& \mid\sqrt{(1)^{\,2} + (-2)^{\,2} + (1)^{\,2}}\mid\;= \sqrt{6\,}\,u^{\,2}
+\end{eqnarray*}
+}
 \end{itemize}
-\end{document}
