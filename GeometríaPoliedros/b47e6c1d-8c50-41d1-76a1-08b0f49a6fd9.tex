@@ -1,0 +1,130 @@
+\documentclass[11pt, a4paper]{scrbook}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{verbatim}
+\usepackage{graphicx} % \scalebox{1.4}{$$}
+
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont % sin mathpazo
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty} % no número de página
+
+\begin{document}
+\subparagraph*{Tetrahedron} % Fire
+% Tetrahedra
+$$\dot{M}\,(1,\;1,\;1)$$
+\begin{comment}
+O(-1, 1, 1)
+S( 1, -, 1)
+Q(-1, 1, 21)
+N( 1, -1, 1)
+P(-1, 1, 1)
+R( 1, 1, 1)
+T( -1, +1 1)
+\end{comment}
+
+\begin{tikzpicture}
+	\coordinate (O) at (0.0, 0.0);
+	% A = (size * Cos 90, size * Sen 90
+	\coordinate (A) at (.0, 2);
+	% (90 - [360 / 3]) -> (90 + 120 = 210) -> 210 - 180 = 30
+	% B = (- size * Cos 30, - size * Sen 30 
+	\coordinate (B) at (-1.7320, -1);
+	% C = (size * Cos 30, - size * Sen 30
+	\coordinate (C) at (1.7320, -1);
+
+	\draw[line width=.5mm] (A) -- (B) -- (C) -- cycle;
+	\begin{scope}[dashed]
+	\draw (A) -- (O);
+	\draw (B) -- (O);
+	\draw (C) -- (O);
+	\end{scope}
+\end{tikzpicture}
+
+\subparagraph*{Cube} % Earth
+% Cube
+\[
+M (1, 1, 1)
+\]
+$$N (1, -1, 1)$$
+$$O (-1, -1, 1)$$
+$$P (-1, 1, 1)$$
+$$Q (-1, 1, -1)$$
+$$R ( 1, 1, -1)$$
+$$S (1, -1, -1)$$
+$$T (-1, -1, -1)$$
+
+\begin{tikzpicture}
+	\coordinate (O) at (0.0, 0.0);
+	% A = (size * Cos 90, size * Sen 90
+	\coordinate (A) at (.0, 2);
+	% (90 - [360 / 6]) -> (90 + 60 = 150) -> 180 - 150 = 30
+	% B = (- size * Cos 30, size * Sen 30 
+	\coordinate (B) at (-1.7320, 1);
+	% C = (size * Cos 30, - size * Sen 30
+	\coordinate (C) at (-1.7320, -1);
+	\coordinate (D) at (.0, -2);
+	
+	\coordinate (E) at (1.7320, -1);
+	\coordinate (F) at (1.7320, 1);
+
+	\begin{scope}[line width=.5mm]
+	\draw (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- cycle;
+	\draw (B) -- (O);
+	\draw (D) -- (O);
+	\draw (F) -- (O);
+	\end{scope}
+
+	\begin{scope}[dashed]
+	\draw (A) -- (O);
+	\draw (C) -- (O);
+	\draw (E) -- (O);
+	\end{scope}
+\end{tikzpicture}
+
+\subparagraph*{Octahedron} % Air
+$$
+G_{f} (0, 0, 2)
+$$
+
+\begin{comment}
+% Octahedron
+H( 0, 0, -2 )
+(2 0, 0)
+J{ 0, 2 0 )
+K( 0, -2 0)
+L({ -2 0, 0)
+\end{comment}
+
+\begin{tikzpicture}
+	\coordinate (O) at (0.0, 0.0);
+	% A = (size * Cos 90, size * Sen 90
+	\coordinate (A) at (.0, 2);
+	% (90 - [360 / 6]) -> (90 + 60 = 150) -> 180 - 150 = 30
+	% B = (- size * Cos 30, size * Sen 30 
+	\coordinate (B) at (-1.7320, 1);
+	% C = (size * Cos 30, - size * Sen 30
+	\coordinate (C) at (-1.7320, -1);
+	\coordinate (D) at (.0, -2);
+	
+	\coordinate (E) at (1.7320, -1);
+	\coordinate (F) at (1.7320, 1);
+
+	\begin{scope}[line width=.5mm]
+	\draw (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- cycle;
+	\draw (A) -- (C) -- (E) -- cycle;
+	\end{scope}
+
+	\draw[dashed] (B) -- (D) -- (F) -- cycle;
+
+\end{tikzpicture}
+
+\end{document}
