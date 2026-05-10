@@ -127,4 +127,57 @@ L({ -2 0, 0)
 
 \end{tikzpicture}
 
+
+\subparagraph*{Icosahedron} % Water
+$$
+G_{f} (0, 0, 2)
+$$
+
+\begin{tikzpicture}
+	\coordinate (O) at (0.0, 0.0);
+	% A = (size * Cos 90, size * Sen 90
+	\coordinate (A) at (.0, 2);
+	% (90 - [360 / 6]) -> (90 + 60 = 150) -> 180 - 150 = 30
+	% B = (- size * Cos 30, size * Sen 30 
+	\coordinate (B) at (-1.7320, 1);
+	% C = (size * Cos 30, - size * Sen 30
+	\coordinate (C) at (-1.7320, -1);
+	\coordinate (D) at (.0, -2);
+	\coordinate (E) at (1.7320, -1);
+	\coordinate (F) at (1.7320, 1);
+	% middle point between A,C
+	\coordinate (M) at (-.8660, .5);
+	% middle point between C,E
+	\coordinate (N) at (.0, -1);
+	% middle point between E,A
+	\coordinate (P) at (.8660, .5);
+
+	\coordinate (X) at (.0, 1);
+	\coordinate (Y) at (-.8660, -.5);
+	\coordinate (Z) at (.8660, -.5);
+
+	\begin{scope}[dashed, gray]
+	\draw (B) -- (D);
+	\draw (D) -- (F);
+	\draw (F) -- (B);
+
+	\draw (A) -- (X);
+	\draw (C) -- (Y);
+	\draw (E) -- (Z);
+
+	\draw (X) -- (Y) -- (Z) -- cycle;
+	\end{scope}
+
+	\begin{scope}[line width=.5mm]
+	\draw (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- cycle;
+	\draw (A) -- (C) -- (E) -- cycle;
+
+	\draw (B) -- (M);
+	\draw (D) -- (N);
+	\draw (F) -- (P);
+
+	\draw (M) -- (N) -- (P) -- cycle;
+	\end{scope}
+\end{tikzpicture}
+
 \end{document}
