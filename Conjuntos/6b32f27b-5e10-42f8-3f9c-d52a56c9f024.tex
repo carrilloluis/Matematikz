@@ -1,0 +1,65 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{mathpazo}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Ejemplos con conjuntos},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\paragraph*{Conjuntos}
+
+\begin{itemize}
+\item{Sea el conjunto \quad$B = \big\{n;\,\{n\};\,\varnothing;\,7\big\}$ \\ Hallar el valor de verdad de las siguientes proposiciones :
+
+\begin{enumerate}[I.]
+\item{$\{n\} \in B \wedge \varnothing \in B$}
+\item{$\varnothing \in B \vee \{\varnothing\} \subset B$}
+\item{$\{\varnothing;\,n\} \subset B \implies \{n; \,\{n\}\} \in B$}
+\end{enumerate}
+\begin{tasks}(5)
+\task{VVV}\task{VFV}\task{VFF}\task{VVF}\task{FFF}
+\end{tasks}
+}
+
+\item{En un avión que transporta $100$ personas, $50$ no fuman y $30$ no beben. Si hay $10$ personas que solamente beben ¿Cuántas personas ni fuman, ni beben o fuman y beben?
+\begin{tasks}(5)
+\task{59}\task{60}\task{61}\task{62}\task{63} 
+\end{tasks} 
+}
+
+\item{Determinar el valor de verdad de las siguientes proposiciones :
+\begin{enumerate}[I.]
+\item{Si $P(A)$ es vacío, entonces $A$ es un conjunto vacío}
+\item{Si $A$ tiene dos elementos, entonces $P(A)$ tiene tres subconjuntos propios}
+\item{$n\big[P(A)\big]$ siempre es un número par}
+\end{enumerate}
+\begin{tasks}(5)
+\task{VVF}\task{FFF}\task{FVF}\task{FFV}\task{VFF}
+\end{tasks}}
+\item{En un grupo de $100$ estudiantes, $49$ no llevan el curso de Sociología y $53$ no siguen el curso de Filosofía. Si $27$ alumnos no siguen Filosofía, ni Sociología ¿Cuántos alumnos llevan exactamente unos de tales cursos?
+\begin{tasks}(5)
+\task{40}\task{44}\task{48}\task{52}\task{56}
+\end{tasks}}
+\item{Indicar verdadero o falso en las siguientes alternativas :
+\begin{enumerate}[I.]
+\item{Todos los conjuntos iguales son equipotentes y recíprocos}
+\item{Toda familia de conjuntos es conjunto de conjuntos y recíprocos}
+\item{Dos conjuntos son comparables, si un conjunto pertenece a otro conjunto}
+\end{enumerate}
+\begin{tasks}(5)
+\task{FFV}\task{FVF}\task{VFF}\task{FFF}\task{VVF}
+\end{tasks}}
+\item{Si \quad$A = \{1;\,2;\,\{1;\,2\};\,3\}$\quad y \quad$B = \{\{2;\,1\};\,\{1;\,3\};\,3\}$ \\ Hallar : $\big[(A - B) \cap B\big] \cup (B - A)$
+\begin{tasks}(5)
+\task{$\{1;\,3\}$}\task{$A$}\task{$\big\{\{1;\,2\}\big\}$}\task{$\Big\{\{1;\,3\}\Big\}$}\task{$B$}
+\end{tasks}}
+\end{itemize}
+\end{document}
