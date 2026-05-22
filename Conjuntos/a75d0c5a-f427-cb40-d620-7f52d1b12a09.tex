@@ -1,0 +1,58 @@
+\documentclass[11pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{mathpazo}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Ejemplos con conjuntos},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\paragraph*{Conjuntos}
+
+\begin{itemize}
+\item{Dado : \quad$R = \big\{r + 3\;/\; r \in \mathbb{Z}\,;\; r^{\,2} < 9\big\}$. \\ Calcular la suma de elementos del conjunto $R$.
+\begin{tasks}(5)
+\task{0}\task{5}\task{7}\task{10}\task{15}
+\end{tasks}}
+
+\item{Dados los conjuntos : $A = \Big\{\dfrac{2a + 1}{3}\;/\;\dfrac{a}{2} \in \mathbb{N} \wedge 1 \leq a \leq 9\Big\}$\quad y \\ $B = \Big\{\dfrac{2b - 1}{3}\;/\;b \in \mathbb{N} \wedge 2 < b \leq 6 \Big\}$ \\ Determinar : $G = \big[n(B)\big]^{\,n(A)} + n(A)$
+\begin{tasks}(5)
+\task{120}\task{180}\task{200}\task{260}\task{270}
+\end{tasks}}
+\item{Sean los conjuntos : $A = \big\{\{\varnothing\};\,\{\{\varnothing\}\};\,\varnothing\big\}$\quad y \quad$B = \big\{\{\varnothing\};\,\varnothing\big\} - \{\varnothing\}$ \\ Indicar cuál(es) de los siguientes enunciados son correctos.
+\begin{enumerate}[I.]
+\item{$B - A \neq \varnothing$}
+\item{$\varnothing \in (A - B)$}
+\item{$A \cap A = \{\varnothing\}$}
+\end{enumerate}
+
+\begin{tasks}(3)
+\task{Solo I}\task{Solo II}\task{Solo III}\task{I y II}\task{I y III}
+\end{tasks}
+}
+\item{Dado el conjunto : $G = \big\{x \in \mathbb{R}\;/\;x^{2} - 2(9k - 20)x + 7(6k - 11) = 0\,;\, k \in \mathbb{N}\big\}$ \\ Determinar ``$k$''; para que $G$ sea un conjunto unitario.
+\begin{tasks}(5)
+\task{1}\task{3}\task{5}\task{7}\task{9}
+\end{tasks}
+}
+\item{
+Sean : $A = \{0\}$;\quad $B = \{\varnothing\}$;\quad $C = \varnothing$\quad y \quad$D = \{\;\}$ \\ Indicar la proposición falsa :
+\begin{enumerate}[I.]
+\item{$n(A) = n(B)\;\wedge\;n(C) = n(D)$}
+\item{$n(A) = n(B)\;\vee\;n(C) = n(D)$}
+\item{$n(A) \neq n(B)\;\vee\;n(C) = n(D)$}
+\item{$n(A) = n(D)\;\wedge\;n(A) = n(B)$}
+\end{enumerate}
+\begin{tasks}(3)
+\task{Solo I}\task{Solo II}\task{Solo III y IV}\task{Solo IV}\task{Solo II y IV}
+\end{tasks} 
+}
+\end{itemize}
+\end{document}
