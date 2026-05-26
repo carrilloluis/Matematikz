@@ -1,0 +1,61 @@
+\documentclass[10pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Ejemplos con conjuntos},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\paragraph*{Conjuntos}
+
+\begin{itemize}
+\item{Dados los conjuntos iguales : $A = \{a^{\,2} + 3;\,b + 1\}$ y $B =\{13;\,19\}$; considerando que $a$ y $b$ son enteros positivos ($a \in \mathbb{Z}^{\,+}\wedge b \in \mathbb{Z}^{+}$). Indique la suma de : $a + b$
+\begin{tasks}(5)
+\task{12}\task{16}\task{24}\task{27}\task{30} % 4 + 12 = 16
+\end{tasks}}
+
+\item{Dado el conjunto $A = \{4;\,3;\, \{6\};\,8\}$ y las proposiciones :
+\begin{enumerate}[I.]
+\item{$\{3\} \in A$} % F
+\item{$\{6\} \in A$} % v
+\item{$8 \in A$} % v 
+\item{$\varnothing \in A$} % f 
+\item{$\{4\} \subset A$} % v 
+\item{$\{6\} \subset A$} % f
+\item{$\varnothing \subset A$} % v
+\item{$\{3;\,8\} \subset A$} % v 
+\end{enumerate}
+Indique el número de proposiciones verdaderas.
+\begin{tasks}(5)
+\task{3}\task{4}\task{5}\task{6}\task{7} % 5
+\end{tasks}}
+
+\item{Indique la suma de los elementos del conjunto : \\ $R = \{x^2 + 2\;/\;x \in \mathbb{Z}^{+} \wedge -4 < x < 4\}$ % {1,2,3} -> {3, 6, 11}
+\begin{tasks}(5)
+\task{20}\task{22}\task{23}\task{24}\task{25} % 20 = 3 + 6 + 11
+\end{tasks}}
+
+\item{¿Cuántos subconjuntos propios tiene el conjunto : $G = \{2;\,3;\,\{2\};\,3;\,2;\,\{2\};\,\{3\}\}$ ?
+\begin{tasks}(5)
+\task{7}\task{15}\task{31}\task{63}\task{127} % n(G) = 4 -> 2^{n(g)} - 1 = 15
+\end{tasks}}
+
+\item{Si $R = \{x\,/\,x = (4m - 1)^{2}; m \in \mathbb{N} \wedge 2 \leq m\leq 5\}$; entonces el conjunto $A$, escrito por extensión es : % {2,3,4,5}
+\begin{tasks}(3)
+\task{$\{2\,;\,3\,;\,4\,;\,5\}$}
+\task{$\{3\,;\,4\,;\,7\,;\,9\}$}
+\task{$\{4\,;\,9\,;\,16\,;\,25\}$}
+\task{$\{7\,;\,11\,;\,15\,;\,19\}$}
+\task{$\{49\,;\,121\,;\,225\,;\,361\}$}
+\end{tasks}}
+
+\end{itemize}
+\end{document}
