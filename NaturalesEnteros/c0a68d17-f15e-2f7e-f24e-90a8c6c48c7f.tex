@@ -1,0 +1,30 @@
+\documentclass[10pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{verbatim}
+\usepackage{mathpazo}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\usepackage{diagbox}
+
+\begin{document}
+Multiplicación : $592 \times 321$
+
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+		\empty & 5 & 9 & 2 \\ \hline
+		3 & \diagbox{1}{5} & \diagbox{2}{7} & \diagbox{0}{6} \\ \hline
+		2 & \diagbox{1}{0} & \diagbox{1}{8} & \diagbox{0}{4} \\ \hline
+		1 & \diagbox{0}{5} & \diagbox{0}{9} & \diagbox{0}{2} \\ \hline
+		%  \\ \hline
+    \end{tabular}
+    
+$592 \times 321 = 190 032$    
+\end{document}
