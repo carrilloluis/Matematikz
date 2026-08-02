@@ -9,6 +9,7 @@
 \usepackage{tasks}
 \usepackage{enumerate}
 \usepackage{graphicx}
+\usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \hypersetup{pdftitle={Lógica},pdfauthor={Luis Carrillo Gutiérrez}}
 
@@ -20,28 +21,70 @@
 
 \subsection*{Lógica proposicional}
 
-\noindent La lógica proposicional llamada también \emph{simbólica} o \emph{matemática}, es parte de la lógica que estudia las proposiciones y la relación que existe entre ellas a través de las variables proposicionales y los conectores.
+\noindent La lógica proposicional llamada también \emph{simbólica} o \emph{matemática}, es parte de la lógica que estudia las \textbf{proposiciones} y la relación que existe entre ellas a través de las \textbf{variables proposicionales} y los \textbf{conectores}.
 
 \subsubsection*{Enunciado}
 
 \noindent Se denomina enunciado a toda expresión del lenguaje común, el cual puede ser una frase, oración o expresión algebraica. \\
 
 \noindent Ejemplos :
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item{¿Qué dia es hoy?}
 \item{¡Auxilio!}
 \item{Lima es la capital del Perú}
 \item{$x + 2 > 3$}
 \end{itemize}
 
-Llamada también \emph{enunciado cerrado}; es todo enunciado que tiene la cualidad de ser verdadero o falso sin ninguna ambigüedad. Las proposiciones lógicas se denotan con letras minúsculas tales como : p, q, r, s, 
+\subsubsection*{Proposición lógica}
+\noindent Llamada también \emph{enunciado cerrado}; es todo enunciado que tiene la cualidad de ser {\tt verdadero} o {\tt falso} sin ninguna ambigüedad. Estas se denotan con letras minúsculas tales como : $p$, $q$, $r$, $s$, $\ldots$ . \\
+% Las proposiciones lógicas
 
+\noindent Ejemplos :
+\begin{itemize}[noitemsep]
+\item{El sol es una estrella}
+\item{2 + 3 > 6}
+\item{Luis y María son hermanos}
+\item{Juan estudia y trabaja} 
+\end{itemize}
 
+\paragraph*{Proposiciones simples} -- Llamadas también \emph{proposiciones atómicas} o elementales; son aquellas proposiciones con una sola idea, carecen de conjunciones gramaticales o del adverbio de negación (no). \\
 
-% Lao Marfasomermemos
-% Juan estudia y trabaja 
+\noindent Ejemplos :
+\begin{itemize}[noitemsep]
+\item{$p$ : Rubén es arquitecto}
+\item{$q$ : Luis es compañero de José}
+\item{$r$ : 3 y 4 son números consecutivos} 
+\end{itemize}
 
-\paragraph*{Proposiciones simples} -- Llamadas también proposiciones atómicas o elementales; son aquellas proposiciones con
+\paragraph*{Proposiciones compuestas} -- Llamados también \emph{proposiciones moleculares}; son aquellas proposiciones con dos o más ideas unidas por conjunciones gramaticales; o que contienen el adverbio de negación (no).
 
+\noindent Ejemplos :
+\begin{itemize}[noitemsep]
+\item{Luciana estudia contabilidad o administración}
+\item{$2 + 8 \ge 6$}
+\item{No es cierto que hoy sea lunes}
+\item{Estudia, entonces ingresarás a la universidad}
+\end{itemize}
+
+\subsubsection*{Conectores lógicos}
+Son símbolos que reemplazan a las conjunciones gramaticales y al adverbio de negación; estos conectores permiten relacionar dos o más proposiciones simples, entre los más importantes tenemos :
+\paragraph*{Negación} -- Cuya notación es $\neg$, se lee como : \emph{No es cierto que ...}. Algunas equivalencias de la negación son : No, no es el caso,
+Por ejemplo \\ $p$ : Luis viajó a Ica.
+
+$$
+\neg p : \text{No es cierto que Luis viajó a Ica}.
+$$
+
+Tabla de verdad : \\
+
+\begin{tabular}{|c|c|}
+	\hline
+	p & $\neg p$ \\
+	\hline
+	V & F \\
+	\hline
+	F & V \\
+	\hline
+\end{tabular}
 
 \end{document}
