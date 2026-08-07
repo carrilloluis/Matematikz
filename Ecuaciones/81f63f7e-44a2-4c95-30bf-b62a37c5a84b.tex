@@ -1,0 +1,137 @@
+\documentclass[12pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{verbatim}
+\usepackage{bookman}
+\usepackage{enumerate}
+% \usepackage{tikz}
+% \usetikzlibrary{angles,quotes}
+\usepackage[pdftex]{hyperref}
+\hypersetup{ pdftitle = {   },pdfauthor = {Luis Carrillo Gutiérrez} }
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+
+\section*{Cramer}
+
+\noindent Sea el sistema de ecuaciones lineales con 3 incógnitas ($\,x_{i}\,$) :
+\begin{eqnarray*}
+a_{11}\,x_{1} + a_{12}\,x_{2} + a_{13}\,x_{3} = b_{1} \\
+a_{21}\,x_{1} + a_{22}\,x_{2} + a_{23}\,x_{3} = b_{2} \\
+a_{31}\,x_{1} + a_{32}\,x_{2} + a_{33}\,x_{3} = b_{3}
+\end{eqnarray*}
+
+\noindent Puede ser expresado (representación matricial o forma matricial) como una relación entre matrices ($\,\mathrm{A} \times x_{i} = b\,$):
+
+$$ \left (
+\begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\ 
+a_{31} & a_{32} & a_{33} 
+\end{array}
+\right ) \times \left ( \begin{array}{c} x_{1} \\ x_{2} \\ x_{3} \end{array} \right ) = \left ( \begin{array}{c} b_{1} \\ b_{2} \\ b_{3} \end{array} \right )
+$$ \\
+
+\noindent Se define la \emph{matriz ampliada}, \emph{completa} o \emph{aumentada} del sistema de ecuaciones lineales, como la matriz por bloques ($\,\mathrm{A}^{*} = \mathrm{A}\,|\,b\,$):
+
+$$ \left (
+\begin{array}{ccc|r}
+a_{11} & a_{12} & a_{13} & b_{1} \\
+a_{21} & a_{22} & a_{23} & b_{2} \\ 
+a_{31} & a_{32} & a_{33} & b_{3}
+\end{array}
+\right )
+$$ \\
+
+\noindent Sistemas de tres ecuaciones con tres incógnitas utilizando las fórmulas de Cramer. \\
+
+\begin{itemize}
+\item{ %\begin{eqnarray*}
+$\left .
+\begin{array}{rc}
+x + y + z &= \quad 11 \\
+2x - y + z &= \quad\;5 \\ 
+3x + 2y + z &= \quad 24
+\end{array} \right \} \Rightarrow \left (
+\begin{array}{ccc|r}
+1 & 1 & 1 & 11\\
+2 & -1 & 1 & 5 \\ 
+3 & 2 & 1 & 24 \\
+\end{array} \right )
+%\end{eqnarray*}
+$
+}
+\end{itemize}
+
+\begin{eqnarray*}
+det(A) = |\mathrm{A}| = 
+\begin{vmatrix}
+\,1 & 1 & 1 \\
+\,2 & -1 & 1 \\ 
+\,3 & 2 & 1 \\
+\end{vmatrix} = (-1 + 3 + 4) - (-3 + 2 + 2) = 5
+\end{eqnarray*}
+
+\begin{eqnarray*}
+|\mathrm{A}_{x}| = 
+\begin{vmatrix}
+\mathtt{11} & 1 & 1 \\
+\mathtt{5} & -1 & 1 \\ 
+\mathtt{24} & 2 & 1 \\
+\end{vmatrix} = (-11 + 24 + 10) - (-24 + 22 + 5) = 20
+\end{eqnarray*}
+
+\begin{eqnarray*}
+|A_{y}| = 
+\begin{vmatrix}
+1 & \mathtt{11} & 1 \\
+2 & \mathtt{5}  & 1 \\ 
+3 & \mathtt{24} & 1 \\
+\end{vmatrix} = (5 + 33 + 48) - (15 + 24 + 22) = 25
+\end{eqnarray*}
+
+\begin{eqnarray*}
+|A_{z}| = 
+\begin{vmatrix}
+1 & 1 & \mathtt{11} \\
+2 & -1 & \mathtt{5} \\ 
+3 & 2 & \mathtt{24} \\
+\end{vmatrix} = (-24 + 15 + 44) - (-33 + 10 + 48) = 10
+\end{eqnarray*}
+
+$x = \dfrac{|A_{x}|}{|A|} = \dfrac{20}{5} = 4$ ; $\quad\quad y = \dfrac{|A_{y}|}{|A|} = \dfrac{25}{5} = 5$ ; $\quad\quad z = \dfrac{|A_{z}|}{|A|} = \dfrac{10}{5} = 2$
+
+% \begin{comment}\end{comment}
+
+\begin{itemize}
+\item{% \begin{eqnarray*}
+$\left .
+\begin{array}{cc}
+2x + y + 2z & = 4 \\
+-x + 3y + z & = 3 \\ 
+x - y &= 1
+\end{array} \right \} \Rightarrow \left (
+\begin{array}{ccc|r}
+2 & 1 & 2 & \mathtt{4} \\
+-1 & 3 & 1 & 3 \\ 
+1 & -1 & 0 & 1 \\
+\end{array} \right )
+% \end{eqnarray*}
+$
+}
+\end{itemize}
+
+\begin{itemize}
+\item{$
+\begin{array}{ccr}
+2x + 6y + z & = & 7 \\
+2y - z & = & -1 \\
+5x + 7y - 4z & = & 9
+\end{array}
+$}
+\end{itemize}
+\end{document}
