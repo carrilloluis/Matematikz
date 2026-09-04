@@ -1,0 +1,94 @@
+\documentclass[10pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{verbatim}
+\usepackage{mathpazo}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{tikz} 
+% \usetikzlibrary{angles,quotes}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Matriz de transformación bidimensional (2D)},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont 
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\columnsep}{1.2in}
+
+\begin{document}
+\section*{Matriz de transformación bidimensional (2D)}
+Sea un objeto (un cuadrilátero) de 4 vértices/puntos ($P_{n}$) :
+\begin{eqnarray*}
+P_{\,1} &=& (-1, \;1) \\
+P_{\,2} &=& (\;1, \;1) \\
+P_{\,3} &=& (\;1, -1) \\
+P_{\,4} &=& (-1, -1) 
+\end{eqnarray*}
+
+Gráfico: 
+\begin{center}
+\begin{tikzpicture}
+	\draw[help lines,step=1cm] (-2,-2) grid (2,2);
+	
+	\coordinate (p1) at (-1, 1); 
+	\coordinate (p2) at (1, 1); 
+	\coordinate (p3) at (1, -1); 
+	\coordinate (p4) at (-1, -1); 
+	
+	\draw[line width=1.75] (p1) -- (p2) -- (p3) -- (p4) -- cycle;
+	\draw (p1) circle (.075);
+	\draw (p2) circle (.075);
+	\draw (p3) circle (.075);
+	\draw (p4) circle (.075);
+	
+	\draw (-1.35, 1.3) node {$P_{\,1}$};
+	\draw (1.35, 1.3) node {$P_{\,2}$};
+	\draw (1.35, -1.3) node {$P_{\,3}$};
+	\draw (-1.35, -1.3) node {$P_{\,4}$};
+	% \draw (.25, .25) node {$(0,\,0)$};
+\end{tikzpicture}
+\end{center}
+
+\noindent Un vértice/punto bidimensional se representa mediante sus coordenadas (par ordenado) con un orden estricto $(x,\,y)$, es decir como un \textbf{vector} que indica el desplazamiento horizontal y luego el vertical. Además se puede representar en su \textbf{forma homogénea}, como una matriz y en concreto como una {\tt matriz columna} o {\tt vector columna} (de orden $n \times 1$). Entonces :
+
+$$P_{\,1} = (x,\,y) = \begin{bmatrix}x \\ y \end{bmatrix}_{2 \times 1} \implies (-1,\,1) = \begin{bmatrix} -1 \\ 1 \end{bmatrix}_{2 \times 1}$$
+$$P_{\,2} = (1,\,1) = \begin{bmatrix} \,1 \\ \,1 \end{bmatrix}$$
+$$P_{\,3} = (1,\,-1) = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$$
+$$P_{\,4} = (-1,\,1) = \begin{bmatrix} -1 \\ 1 \end{bmatrix}$$
+
+\noindent Esto no es más que la transpuesta de un \textbf{vector fila} $(\,x\;\;y\,) = [\,x\;\;y\,]$, por tanto nos referimos a una coordenada como también la transpuesta del vector fila : $[\,x\;\;y\;\;z\;\;w\,]^{T}$.
+
+\subparagraph*{¿Qué son las transformaciones geómetricas?} --
+
+\noindent Son cambios de posición, tamaño u orientación sobre objetos vectoriales (en concreto sobre las coordenadas de sus vértices). Estos cambios/transformaciones incluyen escalar, rotar, trasladar, sesgar (deformar), o alguna combinación de todas las mencionadas.
+
+\subparagraph*{¿Cómo se transforman objetos en el espacio bidimensional?} --
+
+\noindent Mediante el uso de matrices (en concreto una \emph{matriz de transformación}), que es el mecanismo matemático para entender cómo transformar geométricamente un objeto. 
+
+\subparagraph*{¿Por qué usar matrices?} --
+
+\noindent Una matriz puede ser usada para describir o calcular transformaciones en un espacio bidimensional (2D) de forma general. Su uso se promueve para describir cualquier /transformación afín/ a un objeto expresado en un grupo de vértices (o coordenadas). 
+
+\subparagraph*{¿Qué es una matriz de transformación?} --
+
+\noindent Es una matriz cuadrada, no menor a una matriz de orden $2\times\!2$, que se usa para transformar/modificar la posición, orientación, forma o tamaño de un objeto (mediante operaciones entre matrices /multiplicación/), aprovechando que las coordenadas de un objeto se puede expresar como una matriz columna. \\
+
+\noindent Por tanto las \emph{transformaciones bidimensionales} pueden ser representadas/expresadas por una matriz de orden $2 \times 2$; sin embargo, la traslación no encaja bien dentro de está regla, por lo tanto una matriz de orden $3 \times 3$ es requerida, y por ello es que las coordenadas de los vértices de los objetos se expresen usando {\tt coordenadas homogéneas} bidimensionales o una matriz de orden $3\times\!1$. 
+
+$$P_{\,1} = (x,\,y) = \begin{bmatrix}x \\ y \\ \mathtt{1}\end{bmatrix}_{3 \times 1} \implies (-1,\,1) = \begin{bmatrix} -1 \\ 1 \\ 1\end{bmatrix}_{3 \times 1}$$
+
+% al escalarlo
+\noindent Es lo que llamamos {\tt normalizar} el vector o reducir a la unidad la tercera fila. Por ejemplo, convertir $[\,4\;\;6\;\;2\,]^T$ a $[\,2\;\;3\;\;1\,]^T$. La excepción es un punto al infinito (un vector direccional), en cuyo caso la tercera fila es 0. \\ 
+
+\noindent Si al multiplicar la matriz de transformación por un vector columna/matriz columna normalizado, se obtiene otro vector columna normalizado (transformado),  siendo esta la forma de representar la transformación de puntos en 2D mediante matrices de orden 3×3 :
+
+$$
+\begin{vmatrix} x\,' \\ y\,' \\ z\,' \end{vmatrix}_{3x1} = \begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix}_{3x2} \times \begin{bmatrix} x \\ y \\ z \end{bmatrix}_{3x1} 
+$$
+\end{document}
