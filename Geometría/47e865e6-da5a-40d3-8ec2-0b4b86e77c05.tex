@@ -22,7 +22,8 @@
 
 \begin{document}
 \section*{Matriz de transformación bidimensional (2D)}
-Sea un objeto (un cuadrilátero) de 4 vértices/puntos ($P_{n}$) :
+\noindent Sea un objeto poligonal (un cuadrilátero) de 4 vértices/puntos ($P_{n}$) y donde cada vértice es un par ordenado ($x$, $y$):
+
 \begin{eqnarray*}
 P_{\,1} &=& (-1, \;1) \\
 P_{\,2} &=& (\;1, \;1) \\
@@ -30,7 +31,7 @@ P_{\,3} &=& (\;1, -1) \\
 P_{\,4} &=& (-1, -1) 
 \end{eqnarray*}
 
-Gráfico: 
+Y representado en un gráfico en el plano $XY$: 
 \begin{center}
 \begin{tikzpicture}
 	\draw[help lines,step=1cm] (-2,-2) grid (2,2);
@@ -50,45 +51,166 @@ Gráfico:
 	\draw (1.35, 1.3) node {$P_{\,2}$};
 	\draw (1.35, -1.3) node {$P_{\,3}$};
 	\draw (-1.35, -1.3) node {$P_{\,4}$};
-	% \draw (.25, .25) node {$(0,\,0)$};
+	\draw (.2, -.25) node {0};
+	\draw (.25, 1.75) node {y};
+	\draw (1.75, -.25) node {x};
+	
+	\begin{scope}[->, line width=0.9] 
+	\draw (0,-.75) -- (0, 1.75);
+	\draw (-.75,0) -- (1.75, 0);
+	\end{scope}
 \end{tikzpicture}
 \end{center}
 
-\noindent Un vértice/punto bidimensional se representa mediante sus coordenadas (par ordenado) con un orden estricto $(x,\,y)$, es decir como un \textbf{vector} que indica el desplazamiento horizontal y luego el vertical. Además se puede representar en su \textbf{forma homogénea}, como una matriz y en concreto como una {\tt matriz columna} o {\tt vector columna} (de orden $n \times 1$). Entonces :
+\noindent Un vértice/punto bidimensional se denota por un par ordenado y sus coordenadas respectivas en un orden estricto $(x,\,y)$, es decir cada término del par ordenado indica el desplazamiento horizontal (coordenada $x$) y luego el vertical (coordenada $y$) en el espacio bidimensional (plano $XY$). Se puede denotar en su forma \textbf{homogénea}, como una matriz y en concreto como una \textbf{matriz columna} o \textbf{vector columna} (de orden $n{\times}1$). Entonces :
 
 $$P_{\,1} = (x,\,y) = \begin{bmatrix}x \\ y \end{bmatrix}_{2 \times 1} \implies (-1,\,1) = \begin{bmatrix} -1 \\ 1 \end{bmatrix}_{2 \times 1}$$
 $$P_{\,2} = (1,\,1) = \begin{bmatrix} \,1 \\ \,1 \end{bmatrix}$$
 $$P_{\,3} = (1,\,-1) = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$$
 $$P_{\,4} = (-1,\,1) = \begin{bmatrix} -1 \\ 1 \end{bmatrix}$$
 
-\noindent Esto no es más que la transpuesta de un \textbf{vector fila} $(\,x\;\;y\,) = [\,x\;\;y\,]$, por tanto nos referimos a una coordenada como también la transpuesta del vector fila : $[\,x\;\;y\;\;z\;\;w\,]^{T}$.
+\noindent Un vértice/punto, como par ordenado $(\,x,\;y\,)$ no es más que un \textbf{vector fila} $[\,x\;\;y\,]$, por tanto es posible referirnos a un vértice en su forma \textbf{homogénea} como la transpuesta del vector fila original : $[\,x\;\;y\,]^{T}$.
 
 \subparagraph*{¿Qué son las transformaciones geómetricas?} --
 
-\noindent Son cambios de posición, tamaño u orientación sobre objetos vectoriales (en concreto sobre las coordenadas de sus vértices). Estos cambios/transformaciones incluyen escalar, rotar, trasladar, sesgar (deformar), o alguna combinación de todas las mencionadas.
+\noindent Son cambios de posición, reflexión, tamaño u orientación sobre objetos poligonales (en concreto sobre las coordenadas de los vértices que lo definen). Estos cambios/transformaciones incluyen escalar, rotar, trasladar, sesgar (deformar), o alguna combinación de todas las mencionadas.
 
 \subparagraph*{¿Cómo se transforman objetos en el espacio bidimensional?} --
 
-\noindent Mediante el uso de matrices (en concreto una \emph{matriz de transformación}), que es el mecanismo matemático para entender cómo transformar geométricamente un objeto. 
+\noindent Mediante multiplicación entre matrices (en concreto la \emph{matriz de transformación bidimensional}) y los vértices del objeto poligonal expresados como matrices columna.
 
 \subparagraph*{¿Por qué usar matrices?} --
 
-\noindent Una matriz puede ser usada para describir o calcular transformaciones en un espacio bidimensional (2D) de forma general. Su uso se promueve para describir cualquier /transformación afín/ a un objeto expresado en un grupo de vértices (o coordenadas). 
+\noindent Existe una matriz que se usa para describir o calcular una /transformación afín/ a un objeto poligonal, en un espacio bidimensional (2D), estas diversas matrices pueden luego ser expresadas como una sola matriz \textbf{general}, la llamada {\tt matriz de transformación bidimensional}. 
 
-\subparagraph*{¿Qué es una matriz de transformación?} --
+\subparagraph*{¿Qué es una matriz de transformación bidimensional?} --
 
-\noindent Es una matriz cuadrada, no menor a una matriz de orden $2\times\!2$, que se usa para transformar/modificar la posición, orientación, forma o tamaño de un objeto (mediante operaciones entre matrices /multiplicación/), aprovechando que las coordenadas de un objeto se puede expresar como una matriz columna. \\
+\noindent Es una matriz cuadrada, no menor a una matriz de orden $2{\times}2$, que se usa para transformar/modificar la posición, orientación, forma o tamaño de un objeto (mediante operaciones entre matrices /multiplicación/), aprovechando que los vértices de un objeto se puede expresar como matrices columna. \\
 
-\noindent Por tanto las \emph{transformaciones bidimensionales} pueden ser representadas/expresadas por una matriz de orden $2 \times 2$; sin embargo, la traslación no encaja bien dentro de está regla, por lo tanto una matriz de orden $3 \times 3$ es requerida, y por ello es que las coordenadas de los vértices de los objetos se expresen usando {\tt coordenadas homogéneas} bidimensionales o una matriz de orden $3\times\!1$. 
+\noindent Si bien la mayoría de las \emph{transformaciones geométricas bidimensionales} pueden ser representadas/expresadas por una matriz de orden $2{\times}2$; Desplazar un objeto poligonal no encaja dentro de está regla, por lo que es requerida una matriz de orden $3{\times}3$ y con ello es necesario que los vértices de los objetos poligonales se expresen como \iffalse\phantom{usando {\tt coordenadas homogéneas} bidimensionales o}\fi una matriz de orden $3{\times}1$, completando la tercera fila con un uno para obtener una {\tt terna}. 
 
 $$P_{\,1} = (x,\,y) = \begin{bmatrix}x \\ y \\ \mathtt{1}\end{bmatrix}_{3 \times 1} \implies (-1,\,1) = \begin{bmatrix} -1 \\ 1 \\ 1\end{bmatrix}_{3 \times 1}$$
 
 % al escalarlo
-\noindent Es lo que llamamos {\tt normalizar} el vector o reducir a la unidad la tercera fila. Por ejemplo, convertir $[\,4\;\;6\;\;2\,]^T$ a $[\,2\;\;3\;\;1\,]^T$. La excepción es un punto al infinito (un vector direccional), en cuyo caso la tercera fila es 0. \\ 
+\begin{comment}
+\noindent Al {\tt normalizar} un vértice (o reducir a la unidad la tercera fila). Por ejemplo, al convertir $[\,4\;\;6\;\;2\,]^T$ a $[\,2\;\;3\;\;1\,]^T$hemos dividido a todos los componentes entre 2. Una excepción a este procedimiento,  es un punto al infinito (un \emph{vector direccional}), en cuyo caso la tercera fila es 0. \\ 
+\end{comment}
 
-\noindent Si al multiplicar la matriz de transformación por un vector columna/matriz columna normalizado, se obtiene otro vector columna normalizado (transformado),  siendo esta la forma de representar la transformación de puntos en 2D mediante matrices de orden 3×3 :
+\noindent Multiplicar la {\tt matriz de transformación bidimensional} ($M_{\,xy}$) por una {\tt matriz columna normalizado} ($P_{\,xy}$)\iffalse vector \fi, nos da otra {\tt matriz columna\iffalse\phantom{normalizado}\fi} /transformada/ ($P\,'_{\,xy}$), siendo esta la forma de representar la transformación de vértices en un espacio bidimensional (2D) mediante matrices de orden $3{\times}3$ :
 
 $$
-\begin{vmatrix} x\,' \\ y\,' \\ z\,' \end{vmatrix}_{3x1} = \begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix}_{3x2} \times \begin{bmatrix} x \\ y \\ z \end{bmatrix}_{3x1} 
+P\,'_{\,xy} = M_{\,xy} \times P_{\,xy} 
 $$
+
+$$
+\begin{pmatrix} x\,' \\ y\,' \\ z\,' \end{pmatrix}_{3x1} = \begin{pmatrix} a & b & c \\ d & e & f \\ g & h & i \end{pmatrix}_{3x3} \times \begin{bmatrix} x \\ y \\ z \end{bmatrix}_{3x1} 
+$$
+
+\noindent Los elementos/componentes de la nueva matriz columna ($P\,'_{\,xy}$) están formados de la combinación líneal de los elementos/componentes de la matriz columna original ($P_{\,xy}$).
+
+$$
+ \begin{bmatrix} a & b & c \\ d & e & f \\ g & h & i \end{bmatrix} \times \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{pmatrix} a \cdot x + b \cdot y + c \cdot z \\ d \cdot x + e \cdot y + f \cdot z \\ g \cdot x + h \cdot y + i \cdot z \end{pmatrix}
+$$
+
+\noindent No solo por convención, la {\tt matriz de transformación bidimensional} va antes que la {\tt matriz columna} en la multiplicación de matrices, ya que está operación no es conmutativa y esta supeditada al orden ($fila{\times}columna$) de las matrices.
+
+% Scaling transformations
+\paragraph*{Escalar en el espacio bidimensional (2D)} -- El escalado /simétrico/ modifica el tamaño del objeto sin cambiar su forma. La \emph{matriz de transformación para escalar} o {\tt matriz de escalado} se representa así:
+
+$$
+\scalebox{1.5}{$S$}_{xy} =
+\begin{pmatrix}
+S_{x} & 0 \\
+0 & S_{y} 
+\end{pmatrix}_{2 \times 2}
+$$
+
+\noindent Aunque se recomienda usar la matriz de escalado de orden $3{\times}3$ :
+$$
+\scalebox{1.5}{$S$}_{xy} =
+\begin{bmatrix}
+S_{x} & 0 & 0 \\
+0 & S_{y} & 0 \\
+0 & 0 & 1
+\end{bmatrix}_{3 \times 3}
+$$
+
+\noindent Donde \;`\scalebox{1.1}{$S_x$}'\; y \;`\scalebox{1.1}{$S_y$}'\; son los {\tt factores de escala} en las direcciones $x$ e $y$ respectivamente. Por tanto para escalar un objeto se procede con cada vértice del objeto poligonal aplicando :
+$$
+\begin{bmatrix} S_{x} & 0 & 0 \\ 0 & S_{y} & 0 \\ 0 & 0 & 1 \end{bmatrix} \times \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{pmatrix} S_{x} \cdot x + 0 \cdot y + 0 \cdot z \\ 0 \cdot x + S_{y} \cdot y + 0 \cdot z \\ 0 \cdot x + 0 \cdot y + 1 \cdot z \end{pmatrix} \implies \begin{bmatrix} S_{x} \cdot x \\ S_{y} \cdot y \\ z \end{bmatrix}_{3{\times}1}  
+$$
+
+\subparagraph*{Ejemplo} - Para duplicar el tamaño del objeto poligonal que planteamos al inicio, escalaremos por ($S_{x} = 2$) y ($S_{y} = 2$), cada vértice :
+
+$$P\,'_{\,1} = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \times \begin{bmatrix} -1 \\ 1 \\ 1 \end{bmatrix} = \begin{pmatrix} 2 \cdot -1 + 0 \cdot 1 + 0 \cdot 1 \\ 0 \cdot -1 + 2 \cdot 1 + 0 \cdot 1 \\ 0 \cdot -1 + 0 \cdot 1 + 1 \cdot 1 \end{pmatrix} = \begin{bmatrix} -2 \\ 2 \\ 1 \end{bmatrix} = (-2,\,2)$$
+
+$$P\,'_{\,2} = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \times \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\ 2 \\ 1 \end{bmatrix} = (2,\,2)$$
+
+$$P\,'_{\,3} = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \times \begin{bmatrix} 1 \\ -1 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \\ -2 \\ 1 \end{bmatrix} = (2,\,-2)$$
+
+$$P\,'_{\,4} = \begin{bmatrix} 2 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 1 \end{bmatrix} \times \begin{bmatrix} -1 \\ -1 \\ 1 \end{bmatrix} = \begin{bmatrix} -2 \\ -2 \\ 1 \end{bmatrix} = (-2,\,-2)$$
+
+\noindent Visto graficamente :
+
+\begin{center} 
+\begin{tikzpicture}[scale=0.75]
+	\draw[help lines,step=1cm] (-3,-3) grid (3,3);
+	
+	\coordinate (p1) at (-1, 1); 
+	\coordinate (p2) at (1, 1); 
+	\coordinate (p3) at (1, -1); 
+	\coordinate (p4) at (-1, -1); 
+	
+	\draw[line width=1.75] (p1) -- (p2) -- (p3) -- (p4) -- cycle;
+	\draw (p1) circle (.075);
+	\draw (p2) circle (.075);
+	\draw (p3) circle (.075);
+	\draw (p4) circle (.075);
+	
+	\draw (-1.35, 1.3) node {$P_{\,1}$};
+	\draw (1.35, 1.3) node {$P_{\,2}$};
+	\draw (1.35, -1.3) node {$P_{\,3}$};
+	\draw (-1.35, -1.3) node {$P_{\,4}$};
+
+	\draw (.2, -.25) node {0};
+	\draw (.4, 1.5) node {y};
+	\draw (1.5, -.35) node {x};
+	
+	\begin{scope}[->, line width=0.9] 
+	\draw (0,-.75) -- (0, 1.5);
+	\draw (-.75,0) -- (1.5, 0);
+	\end{scope}
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}[scale=0.75]
+	\draw[help lines,step=1cm] (-3,-3) grid (3,3);
+
+	\coordinate (p1) at (-2, 2); 
+	\coordinate (p2) at (2, 2); 
+	\coordinate (p3) at (2, -2); 
+	\coordinate (p4) at (-2, -2); 
+	
+	\draw[line width=1.75] (p1) -- (p2) -- (p3) -- (p4) -- cycle;
+	\draw (p1) circle (.075);
+	\draw (p2) circle (.075);
+	\draw (p3) circle (.075);
+	\draw (p4) circle (.075);
+	
+	\draw (-2.45, 2.3) node {$P\,'_{\,1}$};
+	\draw (2.45, 2.3) node {$P\,'_{\,2}$};
+	\draw (2.45, -2.4) node {$P\,'_{\,3}$};
+	\draw (-2.45, -2.4) node {$P\,'_{\,4}$};
+
+	\draw (.2, -.25) node {0};
+	\draw (.4, 1.5) node {y};
+	\draw (1.5, -.35) node {x};
+	
+	\begin{scope}[->, line width=0.9] 
+	\draw (0,-.75) -- (0, 1.5);
+	\draw (-.75,0) -- (1.5, 0);
+	\end{scope}
+\end{tikzpicture}
+\end{center}
+
+\noindent Esta transformación escala desde el origen del plano $XY$ en $(0, 0)$ como el centro del estiramiento hacia afuera. Se ha usado un valor igual para $S_{x}$ y $S_{y}$, el cual asegura escalar simétricamente la forma. Para reducir el tamaño se hacen uso de números fraccionarios.
 \end{document}
