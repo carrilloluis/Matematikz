@@ -1,0 +1,53 @@
+\documentclass[10pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{tikz}
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Rectas paralelas y ortogonales},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\subsubsection*{Rectas paralelas}
+\begin{tikzpicture}
+	\draw[gray, opacity=0.7, help lines,step=1cm] (-2,-2) grid (5,4);
+	\begin{scope}[->,line width=1.3]
+	\draw (0, -.75) -- (0, 1.9);
+	\draw (-.75, 0) -- (1.9, 0);
+	\end{scope}
+	\draw (1.2, -.8) -- (2.885, 2.8);
+	\draw (-1.1, -1.2) -- (1, 3);
+
+	\draw (1.86, -.3) node {{\tt x}};
+	\draw (-.3, 1.75) node {{\tt y}};
+
+	\draw (1.25, 3.2) node {$\mathbb{L}_{1}$};
+	\draw (3.1, 3.0) node {$\mathbb{L}_{2}$};
+
+	\draw (-.5, 2.5) node {$y = m_{1}x + n_{1}$};
+	\draw (3.2, .75) node {$y = m_{2}x + n_{2}$};
+
+	\draw (.25, -.25) node {0};
+
+	\begin{scope}[dashed]
+	\draw (0,1) -- (1.5,1);
+	\draw (2.5, 2) -- (3.75, 2);
+	\end{scope}
+
+	\draw (.5, 1) arc (0:70:.45);
+	\draw (.65, 1.35) node {$\alpha_{1}$};
+	\draw (3, 2) arc (0:70:.45);
+	\draw (3.25, 2.4) node {$\alpha_{2}$};
+\end{tikzpicture}
+\\
+
+$\mathbb{L}_{1} \parallel \mathbb{L}_{2} \iff m_{1} = m_{2}$ \\
+
+% $L_{1} \perp L_{2} \iff m_{1} \cdot m_{2} = -1$
+\end{document}
