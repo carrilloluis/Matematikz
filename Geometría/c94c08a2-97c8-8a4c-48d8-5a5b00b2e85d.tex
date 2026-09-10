@@ -1,0 +1,37 @@
+\documentclass[12pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{tikz}
+\usetikzlibrary {arrows.meta} 
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Ejemplos de rectas paralelas},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\pagestyle{empty}
+
+\begin{document}
+Hallar los valores de\quad {\Large $x$}\quad e\quad {\Large $y$} : \\
+
+%\begin{itemize} \end{itemize}
+\begin{tikzpicture}
+	\begin{scope}[Stealth-Stealth]
+	\draw (-4, 0) -- (6, 0);
+	\draw (-3.75, -2.25) -- (5.25, -2.25);
+	\draw (-1.25, -4) -- (3.5, 1.75);
+	\end{scope}
+	\draw (.25, -.56) node {$(15x + 8)^{\,\circ}$};
+	\draw (-1.65, -2.85) node {$(3x + 36)^{\,\circ}$};
+	\draw (1.5, -1.75) node {$(3y)^{\,\circ}$};
+
+	\draw (5.5, 0.25) node {$r_{\,1}$};
+	\draw (4.75, -1.95) node {$r_{\,2}$};
+
+	\draw (1.25, 0) arc (180:261:.5);
+	\draw (-.65, -2.25) arc (180:261:.5);
+
+	\draw (.9, -2.25) arc (0:67:.5);
+\end{tikzpicture}
+
+\end{document}
