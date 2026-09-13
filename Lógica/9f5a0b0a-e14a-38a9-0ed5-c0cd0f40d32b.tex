@@ -1,12 +1,13 @@
 \documentclass[10pt, twocolumn, landscape, a4paper]{article}
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=1.57cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,es-noshorthands]{babel}
 \usepackage{amssymb, amsmath, amsbsy}
 \usepackage{verbatim}
 \usepackage{mathpazo}
 \usepackage{tasks}
+\usepackage{colortbl}
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{enumitem}
@@ -14,6 +15,7 @@
 \hypersetup{pdftitle={Lógica},pdfauthor={Luis Carrillo Gutiérrez}}
 
 \renewcommand{\familydefault}{\sfdefault}
+\setlength{\columnsep}{1.2cm}
 \pagestyle{empty} 
 
 \begin{document}
@@ -21,7 +23,7 @@
 
 \subsection*{Lógica proposicional}
 
-\noindent La lógica proposicional llamada también \emph{simbólica} o \emph{matemática}, es parte de la lógica que estudia las \textbf{proposiciones} y la relación que existe entre ellas a través de las \textbf{variables proposicionales} y los \textbf{conectores}.
+\noindent La lógica proposicional llamada también \emph{lógica simbólica} o \emph{lógica matemática}, es parte de la lógica que estudia las \textbf{proposiciones} y la relación que existe entre ellas a través de las \textbf{variables proposicionales} y los \textbf{conectores}.
 
 \subsubsection*{Enunciado}
 
@@ -67,24 +69,51 @@
 \end{itemize}
 
 \subsubsection*{Conectores lógicos}
-Son símbolos que reemplazan a las conjunciones gramaticales y al adverbio de negación; estos conectores permiten relacionar dos o más proposiciones simples, entre los más importantes tenemos :
-\paragraph*{Negación} -- Cuya notación es $\neg$, se lee como : \emph{No es cierto que ...}. Algunas equivalencias de la negación son : No, no es el caso,
-Por ejemplo \\ $p$ : Luis viajó a Ica.
-
-$$
-\neg p : \text{No es cierto que Luis viajó a Ica}.
-$$
+\noindent Son símbolos que reemplazan a las conjunciones gramaticales y al adverbio de negación; estos conectores permiten relacionar dos o más proposiciones simples, entre los más importantes tenemos :
+\subparagraph*{Negación} -- Cuya notación es $\neg$, se lee como : \emph{No es cierto que ...}. Algunas equivalencias de la negación son : No, no es el caso,
+Por ejemplo :
+\begin{eqnarray*}
+p &:& \text{Luis viajó a Ica}. \\
+\neg p &:& \text{No es cierto que Luis viajó a Ica}.
+\end{eqnarray*}
 
 Tabla de verdad : \\
 
+\begin{center}
 \begin{tabular}{|c|c|}
-	\hline
-	p & $\neg p$ \\
+	\arrayrulecolor{cyan}\hline
+	$p$ & $\neg p$ \\
 	\hline
 	V & F \\
 	\hline
 	F & V \\
 	\hline
 \end{tabular}
+\end{center}
+
+\subparagraph*{Conjunción} -- Cuya notación es $\wedge$, se lee como : ... y ... Por ejemplo :
+\begin{eqnarray*}
+p &:& \text{Ángel estudia}. \\
+q &:& \text{Ángel trabaja}. \\
+p \wedge q &:& \underbrace{\text{Ángel estudia}}_{p}\quad \underbrace{y}_{\wedge}\quad \underbrace{trabaja}_{q}.
+\end{eqnarray*}
+
+Tabla de verdad (matriz principal): \\
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+	\arrayrulecolor{cyan}\hline
+	$p$ & $q$ &  $p \wedge q$ \\
+	\hline
+	V & V & V \\
+	\hline
+	V & F & F \\
+	\hline
+	F & V & F \\
+	\hline
+	F & F & F \\
+	\hline
+\end{tabular}
+\end{center}
 
 \end{document}
