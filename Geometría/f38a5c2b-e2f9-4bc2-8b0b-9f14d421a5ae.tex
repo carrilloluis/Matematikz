@@ -8,7 +8,7 @@
 \usepackage{tikz}
 % \usetikzlibrary{angles,quotes}
 \usepackage[pdftex]{hyperref}
-\hypersetup{pdftitle={Elementos de Geometría},pdfauthor={Luis Carrillo Gutiérrez}}
+\hypersetup{pdftitle={Elementos gráficos de Geometría},pdfauthor={Luis Carrillo Gutiérrez}}
 
 \renewcommand{\familydefault}{\sfdefault}
 \pagestyle{empty} 
@@ -21,4 +21,31 @@
 	\draw (.325, 0) circle (.05);
 	\draw (.325, -.25) node {P};
 \end{tikzpicture}
+
+\subsubsection*{Línea recta}
+
+\begin{tikzpicture}
+	\draw (-3, 0) -- (3.75, 0);
+	\draw (.25, -.25) node {r};
+\end{tikzpicture}
+
+\subsubsection*{Semirrecta}
+
+\begin{tikzpicture}
+	\draw (0, 0) -- (3.75, 0);
+	\draw (0, 0) circle (.05);
+	\draw (.25, -.25) node {O};
+	\draw (1.75, .25) node {r};
+\end{tikzpicture}
+
+\subsubsection*{Segmento}
+
+\begin{tikzpicture}
+	\draw (0, 0) -- (4.25, 0);
+	\draw (0, 0) circle (.05);
+	\draw (4.25, 0) circle (.05);
+	\draw (.25, -.25) node {A};
+	\draw (4, -.25) node {B};
+\end{tikzpicture}
+
 \end{document}
