@@ -1,0 +1,47 @@
+\documentclass[12pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+%\usepackage{verbatim}
+\usepackage{mathpazo}
+%\usepackage{tasks}
+%\usepackage{enumerate}
+\usepackage{graphicx} % \scalebox{1.4}{$$}
+\usepackage{tikz}
+\usetikzlibrary {arrows.meta} 
+% \usetikzlibrary{angles,quotes}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Ejemplo de vector-fuerza},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty} 
+
+\begin{document}
+
+\begin{itemize}
+\item{Ejemplo 1 --- Una persona ejerce una fuerza $F_{\,1} = 4.5\,Kg{-}f$, mientras otra (persona) aplica una fuerza $F_{\,2} = 4\,Kg{-}f$ con un ángulo de $37^{\,\circ}$ ambas respecto al sur.
+
+\begin{tikzpicture}
+	\begin{scope}[gray,<->]
+	\draw (-2.5,0) -- (2.5,0);
+	\draw (0,-5) -- (0,2.5);
+	\end{scope}
+	\draw (-.35, 2.5) node {N};
+	\draw (-.35, -5) node {S};
+	\draw (2.5, -.35) node {E};
+	\draw (-2.5, -.35) node {O};
+	\begin{scope}[-{Latex[length=3.1mm]}, line width=1.3]
+	\draw (0, 0) -- (0, -4.5);
+	\draw (0, 0) -- (-1.5, -4);
+	\end{scope}
+	\draw (-2, -3.6) node {$F_{\,2}$};
+	\draw (.5, -4) node {$F_{\,1}$};
+
+	% \draw (-.25, 0) arc (265:270:2);
+\end{tikzpicture}
+}
+\end{itemize}
+
+\end{document}
