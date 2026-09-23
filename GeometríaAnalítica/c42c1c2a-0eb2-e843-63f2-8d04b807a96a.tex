@@ -1,0 +1,36 @@
+\documentclass[10pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{graphicx} % 
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+% \usetikzlibrary{angles,quotes}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Pendiente de una Recta},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+\subsection*{Geometría analítica}
+
+\subsubsection*{Pendiente de una Recta ($m$)} 
+
+\begin{tikzpicture}
+	\begin{scope}[gray,<->]
+	\draw (-2.5,0) -- (2.5,0);
+	\draw (0,-1.25) -- (0,2.5);
+	\end{scope}
+	
+	\draw[line width=1.3] (-4, .25) -- (4.5, 2.5);
+	\draw (-1, 1.035) circle (.05);
+	\draw (-1.25, .5) node {$\mathrm{A}\;(x_{_{1}}\,,\;y_{_{1}})$};
+	\draw (2.75, 2.035) circle (.05);
+	\draw (2.25, 2.5) node {$\mathrm{B}\;(x_{_{2}}\,,\;y_{_{2}})$};
+	\draw (4, 1) node {\scalebox{1.4}{$m = \dfrac{\;y_{_{2}} - y_{_{1}}\;}{\;x_{_{2}} - x_{_{1}}\;}$}};
+\end{tikzpicture}
+\end{document}
