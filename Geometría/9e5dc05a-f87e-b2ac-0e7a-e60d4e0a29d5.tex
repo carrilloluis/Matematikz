@@ -1,0 +1,48 @@
+\documentclass[10pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{verbatim}
+\usepackage{mathpazo}
+\usepackage{tasks}
+\usepackage{enumerate}
+\usepackage{graphicx} % \scalebox{1.4}{$$}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\begin{document}
+Resolver los siguientes triángulos : \\
+
+$\triangle\,\mathrm{ABC}$, con $\angle\,\mathrm{C} = 90^{\,\circ}$, $\angle\,\mathrm{A} = 35^{\,\circ}$\quad y \quad$\mathrm{\textbf{a}} = 153{.}2\;m$ \\
+
+\begin{center}
+	\begin{tikzpicture}
+		\coordinate (A) at (-3.75, 0);
+		\coordinate (B) at (0, 3.25);
+		\coordinate (C) at (0, 0);
+		\draw (A) -- (B) -- (C) -- cycle; 
+
+		\draw pic[draw, angle radius=.35cm] {angle=C--A--B};
+		\draw pic[draw, angle radius=.4cm] {angle=A--B--C};
+		% \draw pic[draw, angle radius=.35cm] {angle=A--B--C};
+		\draw (-4.1, 0) node {$\mathrm{A}$};
+		\draw (0, 3.6) node {$\mathrm{B}$};
+		\draw (.1, -.25) node {$\mathrm{C}$};
+
+		\draw (.25, 1.65) node {$\mathrm{a}$};
+		\draw (-1.75, -.3) node {$\mathrm{b}$};
+		\draw (-1.9, 2) node {$\mathrm{c}$};
+	\end{tikzpicture}
+\end{center}
+
+% ABC
+% ABC
+
+\end{document}
