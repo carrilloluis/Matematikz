@@ -1,12 +1,13 @@
-\documentclass[10pt, twocolumn, landscape, a4paper]{article}
+\documentclass[12pt, twocolumn, landscape, a4paper]{article}
 
 \usepackage[margin=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,es-noshorthands]{babel}
 \usepackage{amssymb, amsmath, amsbsy}
 \usepackage{mathpazo}
-% \usepackage{tikz}
-% \usetikzlibrary{angles,quotes}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
 \usepackage[pdftex]{hyperref}
 \hypersetup{pdftitle={Producto Escalar},pdfauthor={Luis Carrillo Gutiérrez}}
 
@@ -16,7 +17,26 @@
 \begin{document}
 \subsubsection*{Producto Escalar entre vectores}
 \begin{itemize}
-\item{Si $\overrightarrow{m}$ y $\overrightarrow{n}$ son \textbf{perpendiculares} ($\alpha = 90^{\,\circ}$) \\ $\vec{m} \cdot \vec{n} = m \cdot n \cdot \cos 90^{\,\circ} = 0$}
+\item{Si \scalebox{1.3}{$\overrightarrow{m}$} y \scalebox{1.3}{$\overrightarrow{n}$} son \textbf{perpendiculares} ($\theta = 90^{\,\circ}$) \\ 
+
+\begin{tikzpicture}
+	\coordinate (A) at (0, 0);
+	\coordinate (B) at (-3, 2);
+	\coordinate (C) at (1.86, 2.5);
+	
+	\begin{scope}[-latex]
+	\draw (A) -- (B);
+	\draw (A) -- (C);
+	\end{scope}
+	
+	\draw pic[draw,angle radius=.35cm] {right angle=C--A--B};
+	\draw (-2.15, 1) node {$\vec{m}$};
+	\draw (1.25, 1.1) node {$\vec{n}$};
+	\draw (0, .85) node {$90^{\,\circ}$};
+\end{tikzpicture}
+
+$\vec{m} \cdot \vec{n} = m \cdot n \cdot \cos 90^{\,\circ} = 0$
+}
 \item{Si $\overrightarrow{m}$ y $\overrightarrow{n}$ son \textbf{paralelos} y con el \textbf{mismo sentido} ($\alpha = 0^{\,\circ}$) \\ $\vec{m} \cdot \vec{n} = m \cdot n \cdot \cos 0^{\,\circ} = a \cdot b$}
 \item{Si $\overrightarrow{m}$ y $\overrightarrow{n}$ son \textbf{paralelos} y con \textbf{distinto sentido} ($\alpha = 180^{\,\circ}$) \\ $\vec{m} \cdot \vec{n} = m \cdot n \cdot \cos 180^{\,\circ} = -1 \cdot a \cdot b $}
 \end{itemize}
