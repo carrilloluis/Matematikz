@@ -1,0 +1,33 @@
+\documentclass[10pt, twocolumn, landscape, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{mathpazo}
+\usepackage{tikz}
+% \usetikzlibrary{angles,quotes}
+\usepackage[pdftex]{hyperref}
+\hypersetup{pdftitle={Triángulo en coordenadas},pdfauthor={Luis Carrillo Gutiérrez}}
+
+\fontfamily{cmss}\selectfont % sin mathpazo
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty} % no número de página
+
+\begin{document}
+
+% Regular polygon in  cartesian coordinate system w/vertex
+
+\begin{center}
+	\begin{tikzpicture}
+		% 18 - 16 = 2
+		\coordinate (A) at (2, 2.01);
+		% 16.26 - 16 = 0.26
+		\coordinate (B) at (.26, -1.01);
+		% 19.74 - 16 = 3.74 
+		\coordinate (C) at (3.74, -1.01);
+		\draw (A) -- (B) -- (C) -- cycle;
+		% \draw (0, 0) -- (A);
+	\end{tikzpicture}
+\end{center}
+\end{document}
